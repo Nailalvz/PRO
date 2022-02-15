@@ -37,7 +37,7 @@ public class Agencia {
 		this.ListaPisos = listaPisos2;
 	}
 	
-	public String toString2() {
+	public String toStringString() {
 		return "La agencia" + getNombre() + "tiene los siguientes pisos disponibles:\n" + toString();
 	}
 	

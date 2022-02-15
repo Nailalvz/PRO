@@ -12,8 +12,6 @@ public class Direccion {
 	private int numCalle;
 	private int numPiso;
 	private String letra;
-//	private static final String[] letras = {"A","B","C","D","F","G","H","I","J","K","L","M","O","P","Q","R","S","T","V","W","X","Y","Z"};
-//	private static final List<String> listaLetras = Arrays.asList(letras);
 	private int codigopostal;
 	private String provincia;
 	private static final String[] provincias = {"alava","albacete","alicante","almeria","asturias","avila","badajoz","barcelona","burgos",
@@ -34,14 +32,6 @@ public class Direccion {
 		this.provincia = "alava";
 	}
 	
-//	public boolean LetraCorrecta(String letra) {
-//		letra = letra.toUpperCase();
-//		if(listaLetras.contains(letra)) {
-//			return true;
-//		} else {
-//			return false;
-//		}
-//	}
 	
 	public boolean ProvinciaCorrecta(String provincia) {
 		provincia = provincia.toLowerCase();
@@ -57,10 +47,6 @@ public class Direccion {
 		this.nombre = nombre;
 		this.numCalle = numCalle;
 		this.numPiso = numPiso;
-//		while(!LetraCorrecta(letra)) {
-//			System.out.println("La letra introducida no es válida.");
-//			letra = sc.nextLine();
-//		}
 		this.letra = letra;	
 		this.codigopostal = codigopostal;
 		while(!ProvinciaCorrecta(provincia)) {
