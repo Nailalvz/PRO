@@ -45,6 +45,7 @@ public class Agencia {
 		return "La agencia" + getNombre() + "tiene los siguientes pisos disponibles:\n" + toString();
 	}
 
+	//Procedimiento para crear un piso
 	public static void CrearPiso() {
 		
 		double metrosCuadrados = 0;
@@ -194,19 +195,7 @@ public class Agencia {
 		Main.cont++;
 	}
 	
-	public static boolean PisoAlquilerVenta(int id) {
-		boolean alquiler;
-		boolean venta;
-		
-		alquiler = Main.ListaPisos.get(id).getAlquiler();
-		venta = Main.ListaPisos.get(id).getVenta();
-		
-		if(!alquiler && !venta) {
-			return false;
-		} else return true;
-		
-	}
-	
+	//Función para determinar si el ID es correcto
 	public static boolean IDCorrecto(int id) {
 		boolean toret = false;
 		for(int i = 0; i < Main.ListaPisos.size(); i++) {
@@ -236,6 +225,7 @@ public class Agencia {
 		}
 	}
 
+	//Función para comprobar que la letra es correcta
 	public static boolean LetraCorrecta(String letra) {
 		String[] tipoLetra = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 		List<String> listaLetras = Arrays.asList(tipoLetra);
@@ -246,6 +236,7 @@ public class Agencia {
 		}
 	}
 	
+	 //Función para comprobar que la provincia sea correcta
 	public static boolean ProvinciaCorrecta(String provincia) {
 		String[] provincias = {"alava","albacete","alicante","almeria","asturias","avila","badajoz","barcelona","burgos",
 				"caceres","cadiz","cantabria","castellon","ciudad real","cordoba","a coruña","cuenca","gerona","granada","guadalajara","guipuzcoa",
@@ -282,6 +273,7 @@ public class Agencia {
 		}
 	}
 
+	//Función para comprobar que los pisos cumple con los rangos de metros introducidos
 	public static boolean MetrosCorrectos(double a, double b) {
 		boolean toret;
 		double min = Main.ListaPisos.get(0).getMetrosCuadrados();
@@ -306,6 +298,7 @@ public class Agencia {
 		return toret;
 	}
 	
+	//Método para mostrar los pisos por rango de metros
 	public static void RangoMetros(double a, double b) {
 		
 		for(int i = 0; i < Main.ListaPisos.size(); i ++) {
@@ -316,6 +309,7 @@ public class Agencia {
 		System.out.println("");
 	}
 	
+	//Método para eliminar un piso
 	public static void BorrarPiso(int id) {
 		String opcion;
 		int pos = 0;
@@ -341,7 +335,9 @@ public class Agencia {
 		}while(!opcion.equals("y") && !opcion.equals("n"));
 		
 	}
-		private static boolean PreciosCorrectosAlquiler(int a, int b) {
+	
+	//Función para comprobar que el rango de precio de alquiler se cumple
+		public static boolean PreciosCorrectosAlquiler(int a, int b) {
 		boolean toret;
 		int minA = Main.ListaPisos.get(0).getPrecioAlquiler();
 		int maxA = Main.ListaPisos.get(1).getPrecioAlquiler();
@@ -371,7 +367,9 @@ public class Agencia {
 		}
 		return toret;
 	}
-		private static boolean PreciosCorrectosVenta(int a, int b) {
+		
+		//Función para comprobar que el rango de precio de venta se cumple
+		public static boolean PreciosCorrectosVenta(int a, int b) {
 			boolean toret;
 
 			int minV = Main.ListaPisos.get(7).getPrecioVenta();
@@ -401,6 +399,7 @@ public class Agencia {
 			return toret;
 		}
 	
+		//Método para listar los pisos por precio
 	public static void ListarPiso() {
 		String opcion;
 		boolean salir = false;
@@ -490,6 +489,7 @@ public class Agencia {
 			}
 		}
 	
+	//Método para modificar el alquiler
 	public static void ModificarAlquiler() {
 		int id;
 		String opcion;
@@ -589,6 +589,7 @@ public class Agencia {
 		}
 	}
 	
+	//Método para modificar la venta
 	public static void ModificarVenta() {
 		int id;
 		String opcion;
@@ -691,8 +692,4 @@ public class Agencia {
 			}
 		}	
 	}
-
-	
-	
-	
 }

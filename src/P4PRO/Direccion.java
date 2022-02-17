@@ -31,6 +31,7 @@ public class Direccion {
 		this.provincia = "alava";
 	}
 	
+	//Función para comprobar que la provincia es correcta
 	public boolean ProvinciaCorrecta(String provincia) {
 		provincia = provincia.toLowerCase();
 		if(listaProvincias.contains(provincia)) {
@@ -143,11 +144,8 @@ public class Direccion {
 		 case 8:
 			 aux = tipovia[8];
 			 break;
-		 case 9:
-			 aux = tipovia[9];
-			 break;
 		default:
-			System.out.println("Introduzca un tipo de vía válido.");
+			aux = tipovia[8];
 			break;
 		 }
 		return aux;
@@ -162,15 +160,12 @@ public class Direccion {
 		
 		sb.append(" número ");
 		sb.append(getNumCalle());
-		
-		if(getNumPiso() > 0) {
-			sb.append(" piso ");
-			sb.append(getNumPiso());
-		}
-		if(getLetra() != null) {
-			sb.append(" letra ");
-			sb.append(getLetra());
-		}
+		sb.append(" piso ");
+		sb.append(getNumPiso());
+
+		sb.append(" letra ");
+		sb.append(getLetra());
+
 		sb.append(", ");
 		sb.append(getCodigoPostal());
 		sb.append(", ");
