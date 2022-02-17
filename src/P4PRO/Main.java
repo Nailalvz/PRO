@@ -42,7 +42,6 @@ public class Main {
 		
 		Direccion J1 = new Direccion(1, "El Madrigal", 25, 22, "B", 32911, "ourense");
 		Piso J = new Piso(9, J1, 220, 0, 950000, false, true);
-		
 
 		ListaPisos.add(A);
 		ListaPisos.add(B);
@@ -55,11 +54,8 @@ public class Main {
 		ListaPisos.add(I);
 		ListaPisos.add(J);
 		
-		
 		Agencia Agencia1 = new Agencia("FotoPisos", ListaPisos);
-		
-		
-		
+
 		String opcion;
 		boolean salir = false;
 		
@@ -139,7 +135,6 @@ public class Main {
 								+ "Introduzca su opcion: ");
 								opcion3 = sc.nextLine();
 
-					
 						switch(opcion3) {
 							case"1": 
 								int aux;
@@ -314,7 +309,7 @@ public class Main {
 					}
 				}while(metros > metros2);
 				if(!Agencia.MetrosCorrectos(metros, metros2)) {
-					System.out.println("No existen pisos entre esos rangos de metros cuadrados.\n");
+					System.out.println("\tNo existen pisos entre esos rangos de metros cuadrados.\n");
 				} else {
 					Agencia.RangoMetros(metros,metros2);
 				}

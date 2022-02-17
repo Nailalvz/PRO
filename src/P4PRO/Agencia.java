@@ -45,8 +45,6 @@ public class Agencia {
 		return "La agencia" + getNombre() + "tiene los siguientes pisos disponibles:\n" + toString();
 	}
 
-	
-	
 	public static void CrearPiso() {
 		
 		double metrosCuadrados = 0;
@@ -64,7 +62,6 @@ public class Agencia {
 		String letra;
 		int cod_postal;
 		String provincia;
-		
 		
 		System.out.println("El ID del piso es: " + Main.cont);
 		System.out.println("Introduza los datos solicitados:\n");
@@ -190,10 +187,9 @@ public class Agencia {
 		
 		Main.ListaPisos.add(aux2);
 	
+		System.out.println("\n\tPiso creado con éxito\n");
 		
-		System.out.println("Piso creado con éxito\n");
-		
-		System.out.println(Main.ListaPisos.get(Main.cont).toString() + "\n");
+		System.out.println("\n" + Main.ListaPisos.get(Main.cont).toString() + "\n");
 		
 		Main.cont++;
 	}
@@ -220,12 +216,8 @@ public class Agencia {
 			}else {
 				toret = false;
 			}
-			
 		}
 		return toret;
-		
-		
-		
 	}
 	
 	//Función para comprobar que los códigos postales sean de 5 cifras
@@ -242,10 +234,8 @@ public class Agencia {
 		} else {
 			return false;
 		}
-		
 	}
 
-	
 	public static boolean LetraCorrecta(String letra) {
 		String[] tipoLetra = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 		List<String> listaLetras = Arrays.asList(tipoLetra);
@@ -269,9 +259,7 @@ public class Agencia {
 			return false;
 		}
 	}
-	
-	
-	
+
 	public static void mostrar() {
 		for(int i = 0; i < Main.ListaPisos.size(); i++) {
 			System.out.println(Main.ListaPisos.get(i).toString() + "\n");
@@ -318,7 +306,6 @@ public class Agencia {
 		return toret;
 	}
 	
-	
 	public static void RangoMetros(double a, double b) {
 		
 		for(int i = 0; i < Main.ListaPisos.size(); i ++) {
@@ -339,16 +326,19 @@ public class Agencia {
 			}
 		}
 		do {
-			System.out.println("¿Está seguro de que desea borrar el piso? (y/n)");
+			System.out.println("\n¿Está seguro de que desea borrar el piso? (y/n)");
 			opcion = sc.nextLine();
 			opcion = opcion.toLowerCase();
-			if(opcion.contains("y")) {
+			if(opcion.equals("y")) {
 				Main.ListaPisos.remove(pos);
-				System.out.println("El piso ha sido eliminado correctamente.\n");
-			} else {
-				System.out.println("El piso no ha sido eliminado.\n");
+				System.out.println("\tEl piso ha sido eliminado correctamente.\n");
+			} else if(opcion.equals("n")) {
+				System.out.println("\tEl piso no ha sido eliminado.\n");
 			}
-		}while(!opcion.contains("y") && !opcion.contains("n"));
+			if(!opcion.equals("y") && !opcion.equals("n")) {
+				System.out.println("\tLa opción no es válida");
+			}
+		}while(!opcion.equals("y") && !opcion.equals("n"));
 		
 	}
 		private static boolean PreciosCorrectosAlquiler(int a, int b) {

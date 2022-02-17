@@ -10,8 +10,6 @@ public class Piso {
 	private boolean alquiler;
 	private boolean venta;
 	
-	
-	//Constructor vacío
 	public Piso() {
 		this.id = 0;
 		this.setDireccion(direccion);
@@ -22,7 +20,6 @@ public class Piso {
 		this.venta = false;
 	}
 	
-	//Constructor al que le llegan los parámetros
 	public Piso(int id, Direccion direccion, double metrosCuadrados, int precioAlquiler, int precioVenta, boolean alquiler, boolean venta) {
 		this.id = id;
 		this.direccion = direccion;
@@ -32,7 +29,6 @@ public class Piso {
 		this.alquiler = alquiler;
 		this.venta = venta;
 	}
-	
 	
 	public int getID() {
 		return this.id;
@@ -90,7 +86,6 @@ public class Piso {
 		this.venta = venta;
 	}
 	
-	//Constructor para copiar los datos de un Piso a otro
 	public Piso(Piso piso) {
 		this.id = piso.getID();
 		this.direccion = piso.getDireccion();
@@ -100,8 +95,6 @@ public class Piso {
 		this.alquiler = piso.getAlquiler();
 		this.venta = piso.getVenta();
 	}
-	
-	
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
@@ -152,9 +145,6 @@ public class Piso {
 			sb.append(getPrecioVenta());
 			sb.append(" euros");
 		}
-		
 		return sb.toString();
 	}
-	
-
 }

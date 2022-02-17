@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class Direccion {
 	
 	private int tipodevia;
@@ -32,7 +31,6 @@ public class Direccion {
 		this.provincia = "alava";
 	}
 	
-	
 	public boolean ProvinciaCorrecta(String provincia) {
 		provincia = provincia.toLowerCase();
 		if(listaProvincias.contains(provincia)) {
@@ -56,14 +54,6 @@ public class Direccion {
 		
 		this.provincia = provincia;
 	}
-	
-//	public Direccion(int tipodevia, String nombre, int numCalle, int codigopostal, String poblacion) {
-//		this.tipodevia = tipodevia;
-//		this.nombre = nombre;
-//		this.numCalle = numCalle;
-//		this.codigopostal = codigopostal;
-//		this.provincia = poblacion;
-//	}
 	
 	public int getTipodeVia() {
 		return this.tipodevia;
