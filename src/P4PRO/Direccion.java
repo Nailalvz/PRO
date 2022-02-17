@@ -57,13 +57,13 @@ public class Direccion {
 		this.provincia = provincia;
 	}
 	
-	public Direccion(int tipodevia, String nombre, int numCalle, int codigopostal, String poblacion) {
-		this.tipodevia = tipodevia;
-		this.nombre = nombre;
-		this.numCalle = numCalle;
-		this.codigopostal = codigopostal;
-		this.provincia = poblacion;
-	}
+//	public Direccion(int tipodevia, String nombre, int numCalle, int codigopostal, String poblacion) {
+//		this.tipodevia = tipodevia;
+//		this.nombre = nombre;
+//		this.numCalle = numCalle;
+//		this.codigopostal = codigopostal;
+//		this.provincia = poblacion;
+//	}
 	
 	public int getTipodeVia() {
 		return this.tipodevia;

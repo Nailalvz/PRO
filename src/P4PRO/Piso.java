@@ -33,15 +33,6 @@ public class Piso {
 		this.venta = venta;
 	}
 	
-//	public Piso(Direccion direccion, double metrosCuadrados, int precioAlquiler, int precioVenta, boolean alquiler, boolean venta) {
-//		this.direccion = direccion;
-//		this.metrosCuadrados = metrosCuadrados;
-//		this.precioAlquiler = precioAlquiler;
-//		this.precioVenta = precioVenta;
-//		this.alquiler = alquiler;
-//		this.venta = venta;
-//	}
-	
 	
 	public int getID() {
 		return this.id;
@@ -117,48 +108,47 @@ public class Piso {
 		if(getVenta() && getAlquiler()) {
 			sb.append("El piso con id: ");
 			sb.append(getID());
-			sb.append(" se encuentra en venta y en alquiler");
 			sb.append("\n");
-			sb.append("con dirección en: ");
+			sb.append("\tcon dirección en: ");
 			sb.append(getDireccion());
 			sb.append("\n");
-			sb.append("Tiene ");
+			sb.append("\tTiene ");
 			sb.append(getMetrosCuadrados());
 			sb.append(" metros cuadrados");
 			sb.append("\n");
-			sb.append("El precio de alquiler es ");
+			sb.append("\tEl precio de alquiler es ");
 			sb.append(getPrecioAlquiler());
 			sb.append(" euros");
 			sb.append("\n");
-			sb.append("El precio de venta es ");
+			sb.append("\tEl precio de venta es ");
 			sb.append(getPrecioVenta());
 			sb.append(" euros");
 		} else if(getAlquiler()) {
-			sb.append("El piso en alquiler con id: ");
+			sb.append("El piso con id: ");
 			sb.append(getID());
 			sb.append("\n");
-			sb.append("con dirección en: ");
+			sb.append("\tcon dirección en: ");
 			sb.append(getDireccion());
 			sb.append("\n");
-			sb.append("Tiene ");
+			sb.append("\tTiene ");
 			sb.append(getMetrosCuadrados());
 			sb.append(" metros cuadrados");
 			sb.append("\n");
-			sb.append("El precio es ");
+			sb.append("\tEl precio de alquiler es ");
 			sb.append(getPrecioAlquiler());
 			sb.append(" euros");
 		} else {
-			sb.append("El piso en venta con id: ");
+			sb.append("El piso con id: ");
 			sb.append(getID());
 			sb.append("\n");
-			sb.append("con dirección en: ");
+			sb.append("\tcon dirección en: ");
 			sb.append(getDireccion());
 			sb.append("\n");
-			sb.append("Tiene ");
+			sb.append("\tTiene ");
 			sb.append(getMetrosCuadrados());
 			sb.append(" metros cuadrados");
 			sb.append("\n");
-			sb.append("El precio es ");
+			sb.append("\tEl precio de venta es ");
 			sb.append(getPrecioVenta());
 			sb.append(" euros");
 		}
@@ -166,11 +156,5 @@ public class Piso {
 		return sb.toString();
 	}
 	
-//	public String toString() {
-//			return "El piso en alquiler con ID: " + getID() + "\nCon dirección: " + getDireccion() + "\n"
-//					+ "Tiene " + getMetrosCuadrados() + " metros cuadrados\ny su precio es: " + getPrecio() + "\n";
-//
-//		
-//	}
 
 }
