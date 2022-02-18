@@ -1,7 +1,7 @@
 package P4PRO;
 
 public class Piso {
-	
+
 	private int id;
 	private Direccion direccion;
 	private double metrosCuadrados;
