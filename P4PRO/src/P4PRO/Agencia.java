@@ -52,7 +52,7 @@ public class Agencia {
 	}
 	
 
-	
+	//Comprueba si el id que le llega es correcto
 	public boolean idCorrecto(int id) {
 		for (int i = 0; i < getListaPisos().size(); i++)
 			if(getListaPisos().get(i).getID() == id) {
@@ -61,7 +61,8 @@ public class Agencia {
 		return false;
 	}
 	
-	public static boolean codigoPostalCorrecto(int num) {
+	//Comprueba qeu el código postal sea de 5 números
+	public boolean codigoPostalCorrecto(int num) {
 		int max = 5;
 		int cifras = 0;
 		
@@ -76,7 +77,8 @@ public class Agencia {
 		}
 	}
 	
-	public static boolean letraCorrecta(String letra) {
+	//Comprueba que la letra sea correcta
+	public boolean letraCorrecta(String letra) {
 		String[] tipoLetra = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 		List<String> listaLetras = Arrays.asList(tipoLetra);
 		if(listaLetras.contains(letra.toUpperCase())) {
@@ -86,7 +88,8 @@ public class Agencia {
 		}
 	}
 	
-	public static boolean provinciaCorrecta(String provincia) {
+	//Comprueba que la provincia es correcta
+	public boolean provinciaCorrecta(String provincia) {
 		provincia = provincia.toLowerCase();
 		String[] provincias = {"alava","albacete","alicante","almeria","asturias","avila","badajoz","barcelona","burgos",
 				"caceres","cadiz","cantabria","castellon","ciudad real","cordoba","a coruña","cuenca","gerona","granada","guadalajara","guipuzcoa",
@@ -94,19 +97,21 @@ public class Agencia {
 				"las palmas","pontevedra","la rioja","salamanca","segovia","sevilla","soria","tarragona","tenerife","teruel","toledo","valencia",
 				"valladolid","vizcaya","zamora","zaragoza"};
 		List<String> listaProvincias = Arrays.asList(provincias);
-		if(listaProvincias.contains(provincia)) {
+		if(listaProvincias.contains(provincia.toLowerCase())) {
 			return true;
 		} else {
 			return false;
 		}
 	}
 	
+	//Muestra todos lo pisos
 	public void mostrar() {
 		for(int i = 0; i < getListaPisos().size(); i++) {
 			System.out.println(getListaPisos().get(i).toString() + "\n");
 		}
 	}
 	
+	//Muestra solo el piso del ID
 	public void mostrarPiso(int id) {
 		for(int i = 0; i < getListaPisos().size(); i++) {
 			if(getListaPisos().get(i).getID() == id) {
@@ -115,6 +120,7 @@ public class Agencia {
 		}
 	}
 	
+	//Muestra solo los pisos en alquiler
 	public void mostrarAlquiler() {
 		for(int i = 0; i < getListaPisos().size(); i++) {
 			if(getListaPisos().get(i).getAlquiler() == true) {
@@ -123,6 +129,7 @@ public class Agencia {
 		}
 	}
 	
+	//Muestra solo los pisos en venta
 	public void mostrarVenta() {
 		for(int i = 0; i < listaPisos.size(); i++) {
 			if(getListaPisos().get(i).getVenta() == true) {
@@ -131,6 +138,7 @@ public class Agencia {
 		}
 	}
 	
+	//Comprueba que los pisos cumplan con los rangos introducidos
 	public boolean metrosCorrectos(double a, double b) {
 		boolean toret;
 		double min = getListaPisos().get(0).getMetrosCuadrados();
@@ -155,38 +163,40 @@ public class Agencia {
 		return toret;
 	}
 	
-public void rangoMetros(double a, double b) {
-		
-		for(int i = 0; i < getListaPisos().size(); i ++) {
-			if(getListaPisos().get(i).getMetrosCuadrados() > a && getListaPisos().get(i).getMetrosCuadrados() < b) {
-				System.out.println(getListaPisos().get(i).toString() + "\n");
+	//Muestra los pisos por los rangos introducidos
+	public void rangoMetros(double a, double b) {
+			
+			for(int i = 0; i < getListaPisos().size(); i ++) {
+				if(getListaPisos().get(i).getMetrosCuadrados() > a && getListaPisos().get(i).getMetrosCuadrados() < b) {
+					System.out.println(getListaPisos().get(i).toString() + "\n");
+				}
 			}
-		}
-		System.out.println("");
+			System.out.println("");
 	}
 
-public void listarPisosMetros() {
-	double metros = 0;
-	double metros2 = 0;
-
-	do {
-		System.out.println("Introduzca el mínimo de metros cuadrados: ");
-		metros = Double.parseDouble(sc.nextLine());
-		System.out.println("Introduzca el máximo de metros cuadrados: ");
-		metros2 = Double.parseDouble(sc.nextLine());
-		if(metros > metros2) {
-			System.out.println("Datos mal introducidos.\nPrimero debe introducir el mínimo de metros cuadrados"
-					+ " y a continuación el máximo.");
+	//Pide los rangos de metros y llama a otrso métodos para comprobar que son correctos
+	public void listarPisosMetros() {
+		double metros = 0;
+		double metros2 = 0;
+	
+		do {
+			System.out.println("Introduzca el mínimo de metros cuadrados: ");
+			metros = Double.parseDouble(sc.nextLine());
+			System.out.println("Introduzca el máximo de metros cuadrados: ");
+			metros2 = Double.parseDouble(sc.nextLine());
+			if(metros > metros2) {
+				System.out.println("Datos mal introducidos.\nPrimero debe introducir el mínimo de metros cuadrados"
+						+ " y a continuación el máximo.");
+			}
+		}while(metros > metros2);
+		if(!metrosCorrectos(metros, metros2)) {
+			System.out.println("\tNo existen pisos entre esos rangos de metros cuadrados.\n");
+		} else {
+			rangoMetros(metros,metros2);
 		}
-	}while(metros > metros2);
-	if(!metrosCorrectos(metros, metros2)) {
-		System.out.println("\tNo existen pisos entre esos rangos de metros cuadrados.\n");
-	} else {
-		rangoMetros(metros,metros2);
 	}
-}
 
-//Método para eliminar un piso
+	//Método para eliminar un piso
 	public void borrarPiso(int id) {
 		
 		
@@ -215,6 +225,7 @@ public void listarPisosMetros() {
 		
 	}
 	
+	//Comprueba que los pisos cumplan con los rangos introducidos
 	public boolean preciosCorrectosAlquiler(int a, int b) {
 		boolean toret;
 		int minA = getListaPisos().get(0).getPrecioAlquiler();
@@ -246,6 +257,7 @@ public void listarPisosMetros() {
 		return toret;
 	}
 
+	//Comprueba que los pisos cumplan con los rangos introducidos
 	public boolean preciosCorrectosVenta(int a, int b) {
 		boolean toret;
 
@@ -276,6 +288,7 @@ public void listarPisosMetros() {
 		return toret;
 	}
 
+	//Filtra los pisos por precio de venta y alquiler
 	public void listarPiso() {
 		String opcion;
 		boolean salir = false;
@@ -317,7 +330,7 @@ public void listarPisosMetros() {
 					}
 					System.out.println("");
 				} else {
-					System.out.println("No existen pisos entre los rangos de precios introducidos (" + num + " / " + num2 +")");
+					System.out.println("No existen pisos entre los rangos de precios introducidos (" + num + " / " + num2 +")\n");
 				}
 	
 				break;
@@ -350,7 +363,7 @@ public void listarPisosMetros() {
 					}
 					System.out.println("");
 				} else {
-					System.out.println("No existen pisos entre los rangos de precios introducidos (" + num + " / " + num2 +")");
+					System.out.println("No existen pisos entre los rangos de precios introducidos (" + num + " / " + num2 +")\n");
 				}
 				break;
 				
@@ -365,106 +378,7 @@ public void listarPisosMetros() {
 			}
 		}
 
-	//Método para modificar el alquiler
-	public void ModificarAlquiler() {
-		int id;
-		String opcion;
-		boolean salir = false;
-		
-		while(!salir) {
-			do {
-					System.out.println("Introduzca el ID del piso que desea modificar: ");
-					id = Integer.parseInt(sc.nextLine());
-					if(!idCorrecto(id)) {
-						System.out.println("El ID no es correcto.");
-					}
-				}while(!idCorrecto(id));
-			
-			System.out.println("\n" + getListaPisos().get(id).toString() + "\n");
-
-			if(getListaPisos().get(id).getAlquiler()) {
-				System.out.println("El piso se encuentra en alquiler:\n"
-						+ "1. Eliminarlo de alquiler\n"
-						+ "2. Modificar el precio\n"
-						+ "0. Salir");
-				opcion = sc.nextLine();
-				 switch(opcion) {
-				 case "1":
-					 if(getListaPisos().get(id).getVenta()) {
-						 String aux;
-						 do {
-							 System.out.println("¿Está seguro de que quiere eliminarlo de alquiler? (y/n).\nSe borrará su precio de alquiler automáticamente.");
-							 aux = sc.nextLine();
-							 aux = aux.toLowerCase();
-							 if(!aux.equals("y") && !aux.equals("n")) {
-								 System.out.println("La opción no es válida");
-							 }
-						 }while(!aux.equals("y") && !aux.equals("n"));
-						 
-						 if(aux.equals("y")) {
-							getListaPisos().get(id).setAlquiler(false);
-							getListaPisos().get(id).setPrecioAlquiler(0);
-							System.out.println("Cambio realizado con éxito.\n" + getListaPisos().get(id).toString() + "\n");
-							salir = true;
-						 }
-					 } else if (!getListaPisos().get(id).getVenta()) {
-						 System.out.println("NO se puede quitar el piso de alquiler.\nPrimero añadalo a venta.\n\tSi el piso a dejado de estar disponible tiene la opcion eliminar.");
-						 salir = true;
-					 }
-					 break;
-					 
-				 case "2":
-					 int num;
-					 do {
-						 System.out.println("Introduce el nuevo precio de alquiler: ");
-						 num = Integer.parseInt(sc.nextLine());
-					 }while(num <= 0);
-					 
-					 getListaPisos().get(id).setPrecioAlquiler(num);
-					 System.out.println("Cambio realizado con éxito.\n" + getListaPisos().get(id).toString() + "\n");
-					 salir = true;
-					 break;
-					 
-				 case "0":
-					 salir = true;
-					 System.out.println("Volviendo al menú de modificación.\n");
-					 break;
-				default:
-					System.out.println("La opción no es válida.\n");
-					break;
-				 }
-			} else if(!getListaPisos().get(id).getAlquiler()) {
-				System.out.println("El piso NO se encuentra en alquiler:\n"
-						+ "1. Añadirlo a alquiler\n"
-						+ "0. Salir");
-				opcion = sc.nextLine();
-				switch(opcion) {
-				case "1":
-					int num;
-					do {
-						System.out.println("Introduzca el precio de alquiler: ");
-						num = Integer.parseInt(sc.nextLine());
-					}while(num <= 0);
-					
-					getListaPisos().get(id).setAlquiler(true);
-					getListaPisos().get(id).setPrecioAlquiler(num);
-					System.out.println("Datos modificados con éxito.\n" + getListaPisos().get(id).toString() + "\n");
-					salir = true;
-				break;
-				
-				case "0":
-					salir = true;
-					System.out.println("Regresando al menú de modificación.\n");
-				break;
-				
-				default:
-					System.out.println("La opción no es válida.\n");
-				break;
-				}
-			}
-		}
-	}
-
+	//Método para modificar el alquiler que comprueba si el piso está en alquiler o no
 	public void modificarAlquiler() {
 		int id;
 		String opcion;
@@ -567,6 +481,7 @@ public void listarPisosMetros() {
 		}
 	}
 	
+	//Método para modificar la venta que comprueba si el piso está en venta o no
 	public void modificarVenta() {
 		int id;
 		String opcion;
@@ -622,6 +537,9 @@ public void listarPisosMetros() {
 					 do {
 						 System.out.println("Introduce el nuevo precio de venta: ");
 						 num = Integer.parseInt(sc.nextLine());
+						 if(num <= 0) {
+							 System.out.println("El precio de venta no puede ser 0 o inferior.");
+						 }
 					 }while(num <= 0);
 					 
 					 getListaPisos().get(id).setPrecioVenta(num);
@@ -673,7 +591,8 @@ public void listarPisosMetros() {
 		}	
 	}
 	
-public void crearPiso() {
+	//Crear un piso
+	public void crearPiso() {
 		
 		double metrosCuadrados = 0;
 		int precioAlquiler = 0;
@@ -823,9 +742,11 @@ public void crearPiso() {
 		setCont(getCont() + 1);
 	}
 
+	//Menú para modificar un piso
 	public void modificarPiso() {
-	
 		
+		mostrar();
+
 		String opcion;
 		boolean salir = false;
 		
@@ -868,190 +789,190 @@ public void crearPiso() {
 				
 			}
 		}
-		
-		
 	}
 
- public void modificarDireccion() {
-	String opcion;
-	boolean salir = false;
-	int id;
+	//Menú para modificar la dirección
+	public void modificarDireccion() {
+		String opcion;
+		boolean salir = false;
+		int id;
+		
+			do {
+				System.out.println("Introduzca el ID del piso que desea modificar: ");
+				id = Integer.parseInt(sc.nextLine());
+				if(!idCorrecto(id)) {
+					System.out.println("El ID no es correcto.");
+				}
+			}while(!idCorrecto(id));
+			
+			mostrarPiso(id);
+			
+			while(!salir) {
+				System.out.println("Opciones de modificación de la dirección:\n"
+						+ "\t1- Tipo de vía\n"
+						+ "\t2- Nombre de la calle\n"
+						+ "\t3- Número de la calle\n"
+						+ "\t4- Número del piso\n"
+						+ "\t5- Letra del piso\n"
+						+ "\t6- Código postal\n"
+						+ "\t7- Provincia\n"
+						+ "\t0- Para salir\n"
+						+ "Introduzca su opcion: ");
+				opcion = sc.nextLine();
 	
-		do {
+				switch(opcion) {
+				
+				case "1":
+					int aux;
+					do {
+						System.out.println("Se le ha asignado a cada tipo de vía un identificador de la siguiente forma:"
+							+ "\n\tAvenida: 0"
+							+ "\n\tBulevar: 1"
+							+ "\n\tCalle: 2"
+							+ "\n\tCamino: 3"
+							+ "\n\tCarretera: 4"
+							+ "\n\tPlaza: 5"
+							+ "\n\tRúa: 6"
+							+ "\n\tUrbanizacion: 7"
+							+ "\n\tOtro: 8"
+							+ "\nIntroduzca el identificador para seleccionar el tipo de vía: ");
+						aux = Integer.parseInt(sc.nextLine());
+						if(aux < 0 || aux > 8) {
+							System.out.println("Error al seleccionar el tipo de vía. Vuelva a introducir el identificador.\n");
+						}
+					}while(aux < 0 || aux > 8);
+					getListaPisos().get(id).getDireccion().setTipodeVia(aux);
+					System.out.println("\n");
+					mostrarPiso(id);
+					System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
+				
+				break;
+				
+				case "2":
+					System.out.println("Introduzca el nombre de la calle:");
+					String calle = sc.nextLine();
+					getListaPisos().get(id).getDireccion().setNombre(calle);
+					System.out.println("\n");
+					mostrarPiso(id);
+					System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
+				break;
+				
+				case "3":
+					int numCalle;
+					do {
+						System.out.println("Introduzca el número de la calle:");
+						numCalle = Integer.parseInt(sc.nextLine());
+						if(numCalle <= 0) {
+							System.out.println("El número de la calle no debe ser menor o igual a 0.");
+						}
+					}while(numCalle <= 0);
+					
+					getListaPisos().get(id).getDireccion().setNumCalle(numCalle);
+					System.out.println("\n");
+					mostrarPiso(id);
+					System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
+				break;
+				
+				case "4":
+					int numPiso;
+					do {
+						System.out.println("Introduzca el número del piso:");
+						numPiso = Integer.parseInt(sc.nextLine());
+						if(numPiso < 0) {
+							System.out.println("El piso introducido NO puede ser inferior a 0.");
+						}
+					}while(numPiso < 0);
+					
+					getListaPisos().get(id).getDireccion().setNumPiso(numPiso);
+					System.out.println("\n");
+					mostrarPiso(id);
+					System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
+				break;
+				
+				case "5":
+					String letra;
+					do {
+						System.out.println("Introduzca la letra del piso:");
+						letra = sc.nextLine();
+						letra = letra.toUpperCase();
+						if(!letraCorrecta(letra)) {
+							System.out.println("La letra introducida NO es válida.");
+						}
+					}while(!letraCorrecta(letra));
+					
+					getListaPisos().get(id).getDireccion().setLetra(letra);
+					System.out.println("\n");
+					mostrarPiso(id);
+					System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
+				break;
+				
+				case "6":
+					int cod_postal;
+					do {
+						System.out.println("Introduzca el código postal:");
+						cod_postal = Integer.parseInt(sc.nextLine());
+	
+						if(!codigoPostalCorrecto(cod_postal)) {
+							System.out.println("El código postal NO es válido recuerde que debe tener 5 cifras.");
+						}
+					}while(!codigoPostalCorrecto(cod_postal));
+					
+					getListaPisos().get(id).getDireccion().setCodigoPostal(cod_postal);
+					System.out.println("\n");
+					mostrarPiso(id);
+					System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
+				break;
+				
+				case "7":
+					String provincia;
+					do {
+						System.out.println("Introduzca la provincia del piso:\n(Sin tildes)");
+						provincia = sc.nextLine();
+						if(!provinciaCorrecta(provincia)) {
+							System.out.println("La provincia introducida NO es correcta. Tenga en cuenta que puede haber errores como por ejemplo"
+									+ " escribir La Coruña que sería erroneo siendo lo correcto A Coruña.\n");
+						}
+					}while(!provinciaCorrecta(provincia));
+					
+					getListaPisos().get(id).getDireccion().setProvincia(provincia);
+					System.out.println("\n");
+					mostrarPiso(id);
+					System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
+				break;
+				
+				case"0":
+					salir = true;
+					System.out.println("\nHa seleccionado salir.\n\t Volviendo al menú de modificación\n");
+				break;
+				
+				default:
+					System.out.println("La opción no es válida");
+				
+				}
+			}
+	 	}
+		
+	//Método para modificar los metros cuadrados
+	 public void modificarMetros() {
+		 double metrosCuadrados;
+		 int id;
+		 do {
+			 
 			System.out.println("Introduzca el ID del piso que desea modificar: ");
 			id = Integer.parseInt(sc.nextLine());
 			if(!idCorrecto(id)) {
 				System.out.println("El ID no es correcto.");
 			}
 		}while(!idCorrecto(id));
-		
-		mostrarPiso(id);
-		
-		while(!salir) {
-			System.out.println("Opciones de modificación de la dirección:\n"
-					+ "\t1- Tipo de vía\n"
-					+ "\t2- Nombre de la calle\n"
-					+ "\t3- Número de la calle\n"
-					+ "\t4- Número del piso\n"
-					+ "\t5- Letra del piso\n"
-					+ "\t6- Código postal\n"
-					+ "\t7- Provincia\n"
-					+ "\t0- Para salir\n"
-					+ "Introduzca su opcion: ");
-			opcion = sc.nextLine();
-
-			switch(opcion) {
+		  mostrarPiso(id);
+		  do {
+				System.out.println("\nIntroduzca lo metros cuadrados: ");
+				metrosCuadrados = Double.parseDouble(sc.nextLine());
+			}while(metrosCuadrados <= 0);
 			
-			case "1":
-				int aux;
-				do {
-					System.out.println("Se le ha asignado a cada tipo de vía un identificador de la siguiente forma:"
-						+ "\n\tAvenida: 0"
-						+ "\n\tBulevar: 1"
-						+ "\n\tCalle: 2"
-						+ "\n\tCamino: 3"
-						+ "\n\tCarretera: 4"
-						+ "\n\tPlaza: 5"
-						+ "\n\tRúa: 6"
-						+ "\n\tUrbanizacion: 7"
-						+ "\n\tOtro: 8"
-						+ "\nIntroduzca el identificador para seleccionar el tipo de vía: ");
-					aux = Integer.parseInt(sc.nextLine());
-					if(aux < 0 || aux > 8) {
-						System.out.println("Error al seleccionar el tipo de vía. Vuelva a introducir el identificador.\n");
-					}
-				}while(aux < 0 || aux > 8);
-				getListaPisos().get(id).getDireccion().setTipodeVia(aux);
-				System.out.println("\n");
-				mostrarPiso(id);
-				System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
-			
-			break;
-			
-			case "2":
-				System.out.println("Introduzca el nombre de la calle:");
-				String calle = sc.nextLine();
-				getListaPisos().get(id).getDireccion().setNombre(calle);
-				System.out.println("\n");
-				mostrarPiso(id);
-				System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
-			break;
-			
-			case "3":
-				int numCalle;
-				do {
-					System.out.println("Introduzca el número de la calle:");
-					numCalle = Integer.parseInt(sc.nextLine());
-					if(numCalle <= 0) {
-						System.out.println("El número de la calle no debe ser menor o igual a 0.");
-					}
-				}while(numCalle <= 0);
-				
-				getListaPisos().get(id).getDireccion().setNumCalle(numCalle);
-				System.out.println("\n");
-				mostrarPiso(id);
-				System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
-			break;
-			
-			case "4":
-				int numPiso;
-				do {
-					System.out.println("Introduzca el número del piso:");
-					numPiso = Integer.parseInt(sc.nextLine());
-					if(numPiso < 0) {
-						System.out.println("El piso introducido NO puede ser inferior a 0.");
-					}
-				}while(numPiso < 0);
-				
-				getListaPisos().get(id).getDireccion().setNumPiso(numPiso);
-				System.out.println("\n");
-				mostrarPiso(id);
-				System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
-			break;
-			
-			case "5":
-				String letra;
-				do {
-					System.out.println("Introduzca la letra del piso:");
-					letra = sc.nextLine();
-					letra = letra.toUpperCase();
-					if(!letraCorrecta(letra)) {
-						System.out.println("La letra introducida NO es válida.");
-					}
-				}while(!letraCorrecta(letra));
-				
-				getListaPisos().get(id).getDireccion().setLetra(letra);
-				System.out.println("\n");
-				mostrarPiso(id);
-				System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
-			break;
-			
-			case "6":
-				int cod_postal;
-				do {
-					System.out.println("Introduzca el código postal:");
-					cod_postal = Integer.parseInt(sc.nextLine());
-
-					if(!codigoPostalCorrecto(cod_postal)) {
-						System.out.println("El código postal NO es válido recuerde que debe tener 5 cifras.");
-					}
-				}while(!codigoPostalCorrecto(cod_postal));
-				
-				getListaPisos().get(id).getDireccion().setCodigoPostal(cod_postal);
-				System.out.println("\n");
-				mostrarPiso(id);
-				System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
-			break;
-			
-			case "7":
-				String provincia;
-				do {
-					System.out.println("Introduzca la provincia del piso:\n(Sin tildes)");
-					provincia = sc.nextLine();
-					if(!provinciaCorrecta(provincia)) {
-						System.out.println("La provincia introducida NO es correcta. Tenga en cuenta que puede haber errores como por ejemplo"
-								+ " escribir La Coruña que sería erroneo siendo lo correcto A Coruña.\n");
-					}
-				}while(!provinciaCorrecta(provincia));
-				
-				getListaPisos().get(id).getDireccion().setProvincia(provincia);
-				System.out.println("\n");
-				mostrarPiso(id);
-				System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación de la dirección.\n");
-			break;
-			
-			case"0":
-				salir = true;
-				System.out.println("\nHa seleccionado salir.\n\t Volviendo al menú de modificación\n");
-			break;
-			
-			default:
-				System.out.println("La opción no es válida");
-			
-			}
-		}
- 	}
-	
- public void modificarMetros() {
-	 double metrosCuadrados;
-	 int id;
-	 do {
-		 
-		System.out.println("Introduzca el ID del piso que desea modificar: ");
-		id = Integer.parseInt(sc.nextLine());
-		if(!idCorrecto(id)) {
-			System.out.println("El ID no es correcto.");
-		}
-	}while(!idCorrecto(id));
-	  mostrarPiso(id);
-	  do {
-			System.out.println("\nIntroduzca lo metros cuadrados: ");
-			metrosCuadrados = Double.parseDouble(sc.nextLine());
-		}while(metrosCuadrados <= 0);
-		
-		getListaPisos().get(id).setMetrosCuadrados(metrosCuadrados);
-		System.out.println("\n");
-		mostrarPiso(id);
-		System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación.\n");
- }
+			getListaPisos().get(id).setMetrosCuadrados(metrosCuadrados);
+			System.out.println("\n");
+			mostrarPiso(id);
+			System.out.println("\n\tCambio realizado con éxito.\n\tVolviendo al menú de modificación.\n");
+	 }
 }
