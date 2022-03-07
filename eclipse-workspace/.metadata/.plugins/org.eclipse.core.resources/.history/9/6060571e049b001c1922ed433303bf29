@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="albumes">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="album" minOccurs="1"
+			maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="album">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="titulo_album"></xsd:element>
+			<xsd:element ref="artista_grupo"></xsd:element>
+			<xsd:element ref="producido" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			<xsd:element ref="num_canciones"></xsd:element>
+			<xsd:element ref="duracion"></xsd:element>
+			<xsd:element ref="fecha"></xsd:element>
+			<xsd:element ref="genero" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			<xsd:element ref="precio"></xsd:element>
+			<xsd:element ref="url" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element ref="formato_publicacion" minOccurs="1" maxOccurs="4"></xsd:element>
+			<xsd:element ref="canciones" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="ref" type="xsd:positiveInteger"></xsd:attribute>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="canciones">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="cancion" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence> 
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="cancion">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="titulo"></xsd:element>
+			<xsd:element ref="duracion"></xsd:element>
+			<xsd:element ref="posicion"></xsd:element>
+			<xsd:element ref="colaboracion_artista" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+			<xsd:element ref="genero" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			<xsd:element ref="letristas" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="fecha">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute name="dia" type="typedia"></xsd:attribute>
+					<xsd:attribute name="mes" type="typemes"></xsd:attribute>
+					<xsd:attribute name="anho" type="typeyear"></xsd:attribute>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:simpleType name="typedia">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:minInclusive value="1"></xsd:minInclusive>
+			<xsd:maxInclusive value="31"></xsd:maxInclusive>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+		<xsd:simpleType name="typemes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Enero"></xsd:enumeration>
+			<xsd:enumeration value="Febrero"></xsd:enumeration>
+			<xsd:enumeration value="Marzo"></xsd:enumeration>
+			<xsd:enumeration value="Abril"></xsd:enumeration>
+			<xsd:enumeration value="Mayo"></xsd:enumeration>
+			<xsd:enumeration value="Junio"></xsd:enumeration>
+			<xsd:enumeration value="Julio"></xsd:enumeration>
+			<xsd:enumeration value="Agosto"></xsd:enumeration>
+			<xsd:enumeration value="Septiembre"></xsd:enumeration>
+			<xsd:enumeration value="Octubre"></xsd:enumeration>
+			<xsd:enumeration value="Noviembre"></xsd:enumeration>
+			<xsd:enumeration value="Diciembre"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="typeyear">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:minInclusive value="1900"></xsd:minInclusive>
+			<xsd:maxInclusive value="2021"></xsd:maxInclusive>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="titulo_album" type="xsd:string"></xsd:element>
+	<xsd:element name="artista_grupo" type="xsd:string"></xsd:element>
+	<xsd:element name="producido" type="xsd:string"></xsd:element>
+	<xsd:element name="num_cancion" type="xsd:positiveInteger"></xsd:element>
+	<xsd:element name="duracion" type="xsd:time"></xsd:element>
+	<xsd:element name="genero" type="xsd:string"></xsd:element>
+	<xsd:element name="precio" type="xsd:positiveInteger"></xsd:element>
+	<xsd:element name="url" type="xsd:string"></xsd:element>
+	<xsd:element name="num_canciones" type="xsd:positiveInteger"></xsd:element>
+	<xsd:element name="titulo" type="xsd:string"></xsd:element>
+	<xsd:element name="posicion" type="xsd:positiveInteger"></xsd:element>
+	<xsd:element name="colaboracion_artista" type="xsd:string"></xsd:element>
+	<xsd:element name="letristas" type="xsd:string"></xsd:element>
+	
+
+	
+	<xsd:attribute name="formato_publicacion">
+	<xsd:simpleType>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="CD" />
+			<xsd:enumeration value="Digital" />
+			<xsd:enumeration value="DVD" />
+			<xsd:enumeration value="Vinilo" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:attribute>
+	
+
+</xsd:schema>

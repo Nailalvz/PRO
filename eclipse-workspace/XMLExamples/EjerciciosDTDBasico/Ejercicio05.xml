@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Agregar el enlace al dtd externo -->
+<!DOCTYPE aviso SYSTEM "Ejercicio05.dtd">
+
+
+<aviso>
+<titulo>...</titulo>
+<parrafo>...</parrafo>
+<grafico>...</grafico>
+<parrafo>...</parrafo>
+<grafico>...</grafico>
+</aviso>

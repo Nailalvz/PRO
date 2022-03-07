@@ -1,0 +1,450 @@
+package P4PRO;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+public class Agencia {
+	private String nombre;
+	private ArrayList<Piso> ListaPisos;
+	static Scanner sc = new Scanner(System.in);
+	
+	
+	public Agencia() {
+		this.nombre = "";
+		this.setListaPisos(ListaPisos);
+	}
+
+	public Agencia(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public Agencia(String nombre, ArrayList<Piso> ListaPisos) {
+		this.nombre = nombre;
+		this.ListaPisos = ListaPisos;
+	}
+	
+	public String getNombre() {
+		return this.nombre;
+	}
+	
+	public ArrayList<Piso> getListaPisos() {
+		return this.ListaPisos;
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public void setListaPisos(ArrayList<Piso> listaPisos2) {
+		this.ListaPisos = listaPisos2;
+	}
+	
+	public String toString() {
+		return "La agencia" + getNombre() + "tiene los siguientes pisos disponibles:\n" + toString();
+	}
+
+	
+	
+	public static void CrearPiso() {
+		
+		double metrosCuadrados = 0;
+		int precioAlquiler = 0;
+		int precioVenta = 0;
+		String alquiler1;
+		String venta1;
+		boolean alquiler = false;
+		boolean venta = false;
+		
+		int tipodevia;
+		String calle;
+		int numCalle;
+		int numPiso;
+		String letra;
+		int cod_postal;
+		String provincia;
+		
+		
+		System.out.println("El ID del piso es: " + Main.cont);
+		System.out.println("Introduza los datos solicitados:\n");
+		
+		do {
+			System.out.println("Metros cuadrados:");
+			metrosCuadrados = Double.parseDouble(sc.nextLine());
+			if(metrosCuadrados <= 0) {
+				System.out.println("Los metros introducidos no son válidos.");
+			}
+		}while(metrosCuadrados <= 0);
+		
+		do {
+			do {
+			System.out.println("¿El piso está a la venta? Introduzca una 'y' para si y una 'n' para no.");
+			venta1 = sc.nextLine();
+			venta1 = venta1.toLowerCase();
+			if(!venta1.equals("y") && !venta1.equals("n")) {
+				System.out.println("La elección introducida no es válida.");
+			}
+			
+			}while(!venta1.equals("y") && !venta1.equals("n"));
+			
+			if(venta1.equals("y")) {
+				venta = true;
+				System.out.println("Precio de venta:");
+				precioVenta = Integer.parseInt(sc.nextLine());
+			} else if(venta1.equals("n")){
+				venta = false;
+			}
+			
+			do {
+				System.out.println("¿El piso está en alquiler? Introduzca una 'y' para si y una 'n' para no.");
+				alquiler1 = sc.nextLine();
+				alquiler1 = alquiler1.toLowerCase();
+				if(!alquiler1.equals("y") && !alquiler1.equals("n")) {
+					System.out.println("La elección introducida no es válida.");
+				}
+				
+			}while(!alquiler1.equals("y") && !alquiler1.equals("n"));
+
+			if(alquiler1.equals("y")) {
+				alquiler = true;
+				System.out.println("Precio del alquiler:");
+				precioAlquiler = sc.nextInt();
+			} else if(alquiler1.equals("n")){
+				alquiler = false;
+			}
+			if(!alquiler && !venta) {
+				System.out.println("Para poder dar el piso de alta debe estar en venta, en alquiler o en ambas.");
+			}
+		}while(!alquiler && !venta);
+		
+		
+		
+		System.out.println("Datos de la dirección:\n");
+		do {
+			System.out.println("Tipo de vía:"
+					+ "\n\tAvenida: 0"
+					+ "\n\tBulevar: 1"
+					+ "\n\tCalle: 2"
+					+ "\n\tCamino: 3"
+					+ "\n\tCarretera: 4"
+					+ "\n\tPlaza: 5"
+					+ "\n\tRúa : 6"
+					+ "\n\tUrbanizacion: 7"
+					+ "\n\tOtro: 8"
+					+ "\nIntroduzca el identificador para seleccionar el tipo de vía: ");
+			tipodevia = sc.nextInt();
+			sc.nextLine();
+		}while(tipodevia < 0 | tipodevia > 8);
+		
+		System.out.println("Nombre de la calle:");
+		calle = sc.nextLine();
+		calle = calle.toLowerCase();
+		
+		do {
+			System.out.println("Introduce el número de la calle: ");
+			numCalle = sc.nextInt();
+			sc.nextLine();
+			if(numCalle <= 0) {
+				System.out.println("El número de la calle no puede ser inferior o igual a 0.");
+			}
+		}while(numCalle <= 0);
+		
+		do {
+			System.out.println("Número del piso:");
+			numPiso = sc.nextInt();
+			sc.nextLine();
+		}while(numPiso < 0);
+		
+		
+		do {
+			System.out.println("Letra:");
+			letra = sc.nextLine();
+			letra = letra.toUpperCase();
+			if(!LetraCorrecta(letra)) {
+				System.out.println("La letra introducida no es correcta.");
+			}
+		}while(!LetraCorrecta(letra));
+		
+		
+		do {
+			System.out.println("Código postal:");
+			cod_postal = sc.nextInt();
+			sc.nextLine();
+			if(!codigoPostalCorrecto(cod_postal)) {
+				System.out.println("El código postal introducido no es válido. Debe tener 5 cifras.");
+			}
+		}while(!codigoPostalCorrecto(cod_postal));
+		
+		do {
+			System.out.println("Provincia:\n(La provincia debe ser introducida sin tildes)");
+			provincia = sc.nextLine();
+			provincia = provincia.toLowerCase();
+			if(!ProvinciaCorrecta(provincia)) {
+				System.out.println("La provincia introducida no es válida.");
+			}
+		}while(!ProvinciaCorrecta(provincia));
+		
+		Direccion aux = new Direccion(tipodevia, calle, numCalle, numPiso, letra, cod_postal, provincia);
+		Piso aux2 = new Piso(Main.cont, aux, metrosCuadrados, precioAlquiler, precioVenta, alquiler, venta);
+		
+		Main.ListaPisos.add(aux2);
+	
+		
+		System.out.println("Piso creado con éxito\n");
+		
+		System.out.println(Main.ListaPisos.get(Main.cont).toString() + "\n");
+		
+		Main.cont++;
+	}
+	
+	public static boolean PisoAlquilerVenta(int id) {
+		boolean alquiler;
+		boolean venta;
+		
+		alquiler = Main.ListaPisos.get(id).getAlquiler();
+		venta = Main.ListaPisos.get(id).getVenta();
+		
+		if(!alquiler && !venta) {
+			return false;
+		} else return true;
+		
+	}
+	
+	public static boolean IDCorrecto(int id) {
+		boolean toret = false;
+		for(int i = 0; i < Main.ListaPisos.size(); i++) {
+			if(Main.ListaPisos.get(i).getID() == id) {
+				toret = true;
+				break;
+			}else {
+				toret = false;
+			}
+			
+		}
+		return toret;
+		
+		
+		
+	}
+	
+	//Función para comprobar que los códigos postales sean de 5 cifras
+	public static boolean codigoPostalCorrecto(int num) {
+		int max = 5;
+		int cifras = 0;
+		
+		while(num!=0) {
+			num = num/10;
+			cifras++;
+		}
+		if(cifras == max) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+
+	
+	public static boolean LetraCorrecta(String letra) {
+		String[] tipoLetra = {"A","B","C","D","F","G","H","I","J","K","L","M","O","P","Q","R","S","T","V","W","X","Y","Z"};
+		List<String> listaLetras = Arrays.asList(tipoLetra);
+		if(listaLetras.contains(letra)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean ProvinciaCorrecta(String provincia) {
+		String[] provincias = {"alava","albacete","alicante","almeria","asturias","avila","badajoz","barcelona","burgos",
+				"caceres","cadiz","cantabria","castellon","ciudad real","cordoba","a coruña","cuenca","gerona","granada","guadalajara","guipuzcoa",
+				"huelva","huesca","islas baleares","jaen","leon","lerida","lugo","madrid","malaga","murcia","navarra","ourense","palencia",
+				"las palmas","pontevedra","la rioja","salamanca","segovia","sevilla","soria","tarragona","tenerife","teruel","toledo","valencia",
+				"valladolid","vizcaya","zamora","zaragoza"};
+		List<String> listaProvincias = Arrays.asList(provincias);
+		if(listaProvincias.contains(provincia)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	
+	
+	public static void mostrar() {
+		for(int i = 0; i < Main.ListaPisos.size(); i++) {
+			System.out.println(Main.ListaPisos.get(i).toString() + "\n");
+		}
+	}
+	
+	public static void mostrarAlquiler() {
+		for(int i = 0; i < Main.ListaPisos.size(); i++) {
+			if(Main.ListaPisos.get(i).getAlquiler() == true) {
+				System.out.println(Main.ListaPisos.get(i).toString() + "\n");
+			}
+		}
+	}
+	
+	public static void mostrarVenta() {
+		for(int i = 0; i < Main.ListaPisos.size(); i++) {
+			if(Main.ListaPisos.get(i).getVenta() == true) {
+				System.out.println(Main.ListaPisos.get(i).toString() + "\n");
+			}
+		}
+	}
+	
+	public static boolean PreciosCorrectos(int a, int b) {
+		boolean toret;
+		int minA = Main.ListaPisos.get(0).getPrecioAlquiler();
+//		int maxA = Main.ListaPisos.get(1).getPrecioAlquiler();
+//		int minV = Main.ListaPisos.get(0).getPrecioVenta();
+		int maxV = Main.ListaPisos.get(6).getPrecioVenta();
+		
+		for(int i = 0; i < Main.ListaPisos.size(); i ++) {
+			if(Main.ListaPisos.get(i).getPrecioAlquiler() < minA) {
+				minA = Main.ListaPisos.get(i).getPrecioAlquiler();
+			}
+		}
+//		for(int i = 0; i < Main.ListaPisos.size(); i ++) {
+//			if(Main.ListaPisos.get(i).getPrecioAlquiler() > maxA) {
+//				maxA = Main.ListaPisos.get(i).getPrecioAlquiler();
+//			}
+//		}
+//		
+//		for(int i = 0; i < Main.ListaPisos.size(); i ++) {
+//			if(Main.ListaPisos.get(i).getPrecioVenta() < minV) {
+//				minV = Main.ListaPisos.get(i).getPrecioVenta();
+//			}
+//		}
+		for(int i = 0; i < Main.ListaPisos.size(); i ++) {
+			if(Main.ListaPisos.get(i).getPrecioVenta() > maxV) {
+				maxV = Main.ListaPisos.get(i).getPrecioVenta();
+			}
+		}
+		if(a < minA && b < minA) {
+			toret = false;
+//		} else if (a > maxA && b > maxA) {
+//			toret = false;
+		} else if (a > maxV && b > maxV) {
+			toret = false;
+//		} else if (a < minV && b < minV) {
+//			toret = false;
+		} else {
+			toret = true;
+		}
+		return toret;
+	}
+	
+	public static void RangoPrecio(int a, int b) {
+		
+		for(int i = 0; i < Main.ListaPisos.size(); i ++) {
+			if(Main.ListaPisos.get(i).getPrecioAlquiler() >= a && Main.ListaPisos.get(i).getPrecioAlquiler() <= b || Main.ListaPisos.get(i).getPrecioVenta() >= a && Main.ListaPisos.get(i).getPrecioVenta() <= b) {
+				System.out.println(Main.ListaPisos.get(i).toString() + "\n");
+			}
+		}
+		System.out.println("");
+	}
+	
+	public static boolean MetrosCorrectos(double a, double b) {
+		boolean toret;
+		double min = Main.ListaPisos.get(0).getMetrosCuadrados();
+		double max = Main.ListaPisos.get(1).getMetrosCuadrados();
+		for(int i = 0; i < Main.ListaPisos.size(); i ++) {
+			if(Main.ListaPisos.get(i).getMetrosCuadrados() < min) {
+				min = Main.ListaPisos.get(i).getMetrosCuadrados();
+			}
+		}
+		for(int i = 0; i < Main.ListaPisos.size(); i ++) {
+			if(Main.ListaPisos.get(i).getMetrosCuadrados() > max) {
+				max = Main.ListaPisos.get(i).getMetrosCuadrados();
+			}
+		}
+		if(a > max && b > max) {
+			toret = false;
+		} else if (a < min && b < min) {
+			toret = false;
+		} else {
+			toret = true;
+		}
+		return toret;
+	}
+	
+	
+	public static void RangoMetros(double a, double b) {
+		
+		for(int i = 0; i < Main.ListaPisos.size(); i ++) {
+			if(Main.ListaPisos.get(i).getMetrosCuadrados() > a && Main.ListaPisos.get(i).getMetrosCuadrados() < b) {
+				System.out.println(Main.ListaPisos.get(i).toString() + "\n");
+			}
+		}
+		System.out.println("");
+	}
+	
+	public static void BorrarPiso(int id) {
+		String opcion;
+		int pos = 0;
+		for(int i = 0; i < Main.ListaPisos.size(); i++) {
+			if(Main.ListaPisos.get(i).getID() == id) {
+				pos = i;
+				break;
+			}
+		}
+		do {
+			System.out.println("¿Está seguro de que desea borrar el piso? (y/n)");
+			opcion = sc.nextLine();
+			opcion = opcion.toLowerCase();
+			if(opcion.contains("y")) {
+				Main.ListaPisos.remove(pos);
+				System.out.println("El piso ha sido eliminado correctamente.\n");
+			} else {
+				System.out.println("El piso no ha sido eliminado.\n");
+			}
+		}while(!opcion.contains("y") && !opcion.contains("n"));
+		
+	}
+	
+//	public static void ListarPiso() {
+//		String opcion;
+//		boolean salir = false;
+//		int num, num2;
+//		
+//		while(!salir) {
+//					System.out.println("\n1. Venta."
+//				+ "\n2. Alquiler."
+//				+ "\n3. Salir");
+//		opcion = sc.nextLine();
+//		
+//		switch(opcion) {
+//		case "1":
+//			do {
+//				System.out.println("Introduzca el mínimo de precio: ");
+//				num = Integer.parseInt(sc.nextLine());
+//				System.out.println("Introduzca el máximo de precio: ");
+//				num2 = Integer.parseInt(sc.nextLine());
+//				if(num > num2) {
+//					System.out.println("Error debe introducir primero el menor precio y luego el mayor.");
+//				}
+//				if (num < 0) {
+//					System.out.println("Error. Debe ser positivo.");
+//				}
+//			}while(num > num2 && num < 0);
+//			
+//			getListaPisos().get(1).getAlquiler();
+//			
+//			break;
+//			
+//		case "2":
+//			break;
+//			
+//		case"0":
+//			break;
+//		default:
+//			break;
+//		}
+		}
+
+		
+		
+	}
+}

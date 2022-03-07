@@ -1,0 +1,7 @@
+<!ELEMENT aviso (titulo?, (parrafo+, grafico)*)>
+<!-- Expresion regular para más de un parrafo y un grafico -->
+
+<!-- Declarar los tipos -->
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT parrafo (#PCDATA)>
+<!ELEMENT grafico (#PCDATA)>

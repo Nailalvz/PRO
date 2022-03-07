@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Crear el enlace al dtd-->
+<!DOCTYPE receta SYSTEM "Ejercicio03.dtd">
+
+
+<!--Los elementos tienen que estar ordenados dentro del dtd como estan puestos en el xml--> 
+
+<receta> 
+    <parrafo>Esto es un párrafo</parrafo>
+    <titulo>...</titulo>
+    <ingredientes>...</ingredientes>
+    <procedimiento>...</procedimiento>
+</receta>

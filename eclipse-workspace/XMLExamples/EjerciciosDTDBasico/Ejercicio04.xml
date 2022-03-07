@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Agregar el enlace al dtd externo -->
+<!DOCTYPE receta SYSTEM "Ejercicio04.dtd">
+
+<receta>
+
+<!-- Agregar titulo para que el dtd sea válido -->
+<titulo>...</titulo>
+<ingredientes>...</ingredientes>
+<procedimiento>...</procedimiento>
+</receta>

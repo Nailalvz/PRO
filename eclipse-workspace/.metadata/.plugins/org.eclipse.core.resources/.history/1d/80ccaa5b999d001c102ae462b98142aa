@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<facturas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="ejercicio5_videoclub.xsd">
+       <factura>
+            <datos_cliente ident="A1">
+                <nombre>Lucia</nombre>
+                <apellido>Álvarez</apellido>
+                <apellido>Pérez</apellido>
+                <dni>34567824H</dni>
+                <telefono>666666666</telefono>
+            </datos_cliente>
+            <datos_factura>
+                <resguardo>
+                    <forma_pago>
+                        Tarjeta
+                    </forma_pago>
+                    <importe_total>
+                       55,99
+                    </importe_total>
+                </resguardo>
+                <alquileres>
+                    <fecha>03-02-2022</fecha>
+                    <peliculas>
+                        <pelicula id_pelicula="AB" valoracion="Excelente">
+                            <titulo>El resplandor</titulo>
+                            <genero>Terror</genero>
+                            <duracion>146</duracion>
+                            <actores>
+                                <actor>
+                                    <nombre>Jack</nombre>
+                                    <apellido>Nicholson</apellido>
+                                </actor>
+                                <actor>
+                                    <nombre>Shelley</nombre>
+                                    <apellido>Duvall</apellido>
+                                </actor>
+                                <actor>
+                                    <nombre>Danny</nombre>
+                                    <apellido>Lloyd</apellido>
+                                </actor>
+                            </actores>
+                        </pelicula>
+                    </peliculas>
+                </alquileres>
+            </datos_factura>
+       </factura>
+       
+              <factura>
+            <datos_cliente ident="A2">
+                <nombre>Álvaro</nombre>
+                <apellido>García</apellido>
+                <apellido>Pérez</apellido>
+                <dni>89765432P</dni>
+                <telefono>666665436</telefono>
+            </datos_cliente>
+            <datos_factura>
+                <resguardo>
+                    <forma_pago>
+                        Efectivo
+                    </forma_pago>
+                    <importe_total>
+                       80,20
+                    </importe_total>
+                </resguardo>
+                <alquileres>
+                    <fecha>04-02-2022</fecha>
+                    <peliculas>
+                        <pelicula id_pelicula="CD" valoracion="buena">
+                            <titulo>Inception</titulo>
+                            <genero>Ciencia Ficción</genero>
+                            <duracion>148</duracion>
+                            <actores>
+                                <actor>
+                                    <nombre>Leonardo</nombre>
+                                    <apellido>Dicaprio</apellido>
+                                </actor>
+                                <actor>
+                                    <nombre>Ken</nombre>
+                                    <apellido>Watanabe</apellido>
+                                </actor>
+                                <actor>
+                                    <nombre>Joseph</nombre>
+                                    <apellido>Gordon-Levitt</apellido>
+                                </actor>
+                            </actores>
+                        </pelicula>
+                    </peliculas>
+                </alquileres>
+                
+                <compra>
+                	<fecha>04-02-2022</fecha>
+                	<peliculas>
+                		<pelicula id_pelicula="EF" valoracion="buena">
+                			<titulo>2001</titulo>
+                            <genero>Ciencia Ficción</genero>
+                            <duracion>142</duracion>
+                            <actores>
+                                <actor>
+                                    <nombre>Keir</nombre>
+                                    <apellido>Dullea</apellido>
+                                </actor>
+                                <actor>
+                                    <nombre>Gary</nombre>
+                                    <apellido>Lockwood</apellido>
+                                </actor>
+                                <actor>
+                                    <nombre>William</nombre>
+                                    <apellido>Sylvester</apellido>
+                                </actor>
+                            </actores>
+                		</pelicula>
+                	</peliculas>
+                </compra>
+            </datos_factura>
+       </factura>
+       
+       
+</facturas>

@@ -1,0 +1,22 @@
+<!ELEMENT albumes (album)*>
+<!ELEMENT album (titulo, artista_grupo, produccion, num_canciones, duracion, fecha,
+generos, precio, url?,formato_publicacion, canciones)>
+<!ELEMENT canciones (cancion)*>
+<!ELEMENT cancion (titulo, duracion, posicion, colaboracion?,genero, letristas)>
+<!ELEMENT colaboracion (artista)*>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT artista_grupo (#PCDATA)>
+<!ELEMENT produccion (#PCDATA)>
+<!ELEMENT num_canciones (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT generos (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT formato_publicacion (#PCDATA)>
+<!ELEMENT posicion (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT letrista (#PCDATA)>
+
+<!ATTLIST album ref ID #REQUIRED>

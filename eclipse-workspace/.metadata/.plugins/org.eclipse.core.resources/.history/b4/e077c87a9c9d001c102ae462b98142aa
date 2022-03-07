@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="facturas">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="factura" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="factura">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="datos_cliente" minOccurs="1"
+					maxOccurs="1" />
+				<xsd:element ref="datos_factura" minOccurs="1"
+					maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="datos_cliente">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="nombre" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="apellido" minOccurs="2" maxOccurs="2" />
+				<xsd:element ref="dni" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="telefono" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+			<xsd:attribute name="ident" type="xsd:string" use="required" />
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO nombre ====== -->
+	<xsd:element name="nombre" type="xsd:string" />
+	<!-- ====== ELEMENTO apellido ====== -->
+	<xsd:element name="apellido" type="xsd:string" />
+	<!-- ====== ELEMENTO dni ====== -->
+	<xsd:element name="dni">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="[0-9]{8}[A-Z]" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- ====== ELEMENTO tfno ====== -->
+	<xsd:element name="telefono">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:positiveInteger"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- ====== ELEMENTO datos_factura ====== -->
+	<xsd:element name="datos_factura">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="resguardo" minOccurs="1" maxOccurs="1" />
+				<xsd:choice>
+					<xsd:element ref="alquileres" minOccurs="1" maxOccurs="1" />
+					<xsd:element ref="compras" minOccurs="1" maxOccurs="1" />
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- ====== ELEMENTO resguardo ====== -->
+	<xsd:element name="resguardo">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="forma_pago" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="importe_total" minOccurs="1"
+					maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO forma_pago ====== -->
+	<xsd:element name="forma_pago" type="xsd:string" />
+	<!-- ====== ELEMENTO importe_total ====== -->
+	<xsd:element name="importe_total" type="xsd:positiveInteger" />
+	<!-- ====== ELEMENTO alquileres ====== -->
+	<xsd:element name="alquileres">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="fecha" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="peliculas" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO fecha ====== -->
+	<xsd:element name="fecha" type="xsd:date" />
+	<!-- ====== ELEMENTO peliculas ====== -->
+	<xsd:element name="peliculas">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="pelicula" minOccurs="1"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO pelicula ====== -->
+	<xsd:element name="pelicula">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="titulo" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="genero" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="duracion" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="actores" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+			<xsd:attribute name="id_pelicula" type="xsd:string" use="required" />
+			<xsd:attribute name="valoracion" type="xsd:string" />
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO titulo ====== -->
+	<xsd:element name="titulo" type="xsd:string" />
+	<!-- ====== ELEMENTO genero ====== -->
+	<xsd:element name="genero" type="xsd:string" />
+	<!-- ====== ELEMENTO duracion ====== -->
+	<xsd:element name="duracion" type="xsd:positiveInteger" />
+	<!-- ====== ELEMENTO actores ====== -->
+	<xsd:element name="actores">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="actor" minOccurs="3" maxOccurs="3" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO actor ====== -->
+	<xsd:element name="actor">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="nombre" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="apellido" minOccurs="1" maxOccurs="2" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO compras ====== -->
+	<xsd:element name="compras">
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="dvds" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="cintas" minOccurs="1" maxOccurs="1" />
+				<xsd:element name="dvds_cintas">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="dvds" minOccurs="1" maxOccurs="1" />
+							<xsd:element ref="cintas" minOccurs="1" maxOccurs="1" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO dvds ====== -->
+	<xsd:element name="dvds">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="dvd" minOccurs="1" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO dvd ====== -->
+	<xsd:element name="dvd">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="titulo" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="fecha" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="extras" minOccurs="1"
+					maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO extras ====== -->
+	<xsd:element name="extras" type="xsd:string" />
+	<!-- ====== ELEMENTO fecha_salida_mercado ====== -->
+
+	<!-- ====== ELEMENTO cintas ====== -->
+	<xsd:element name="cintas">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="cinta" minOccurs="1"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO cinta ====== -->
+	<xsd:element name="cinta">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="titulo" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="formato" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="rebobinado" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====== ELEMENTO formato ====== -->
+	<xsd:element name="formato" type="xsd:string" />
+	<!-- ====== ELEMENTO rebobinado ====== -->
+	<xsd:element name="rebobinado">
+		<xsd:complexType />
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="personas">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="persona" minOccurs="1"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="persona">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="nombre" />
+				<xsd:element ref="nacimiento" />
+				<xsd:element ref="direccion" />
+				<xsd:choice>
+					<xsd:element ref="varon" />
+					<xsd:element ref="hembra" />
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:simpleType name="cadenaString">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"></xsd:maxLength>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+
+	<xsd:element name="nacimiento">
+
+	</xsd:element>
+
+
+
+	<xsd:element name="nombre" type="cadenaString" />
+	<xsd:element name="calle" type="cadenaString" />
+	<xsd:element name="poblacion" type="cadenaString" />
+	<xsd:element name="provincia" type="cadenaString" />
+
+
+
+
+</xsd:schema>

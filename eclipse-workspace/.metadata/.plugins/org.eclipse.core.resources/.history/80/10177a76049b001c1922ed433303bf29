@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<albumes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="albumes.xsd">
+	<album ref="00001">
+	
+		<titulo_album>The Slim Shady LP</titulo_album>
+		<artista_grupo>Eminem</artista_grupo>
+		<producido>Marky y Jeff Bass</producido>
+		<producido>Dr. Dre</producido>
+		<producido>Mel-Man</producido>
+		<producido>Eminem</producido>
+		<num_canciones>20</num_canciones>
+		<duracion>00:59:16</duracion>
+		<fecha dia="23" mes="Febrero" anho="1999"></fecha>
+		<genero>Hardcore hip hop</genero>
+		<genero>Horrorcore</genero>
+		<genero>Comedy hip hop</genero>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion>CD</formato_publicacion>
+		<formato_publicacion>Digital</formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo>My Name Is</titulo>
+				<duracion>00:04:28</duracion>
+				<posicion>2</posicion>
+				<colaboracion_artista></colaboracion_artista>
+				<genero>Hip hop</genero>
+				<letristas>Eminem</letristas>
+				<letristas>Dr. Dre</letristas>
+				<letristas>Labi Siffre</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Guilty Conscience</titulo>
+				<duracion>00:03:19</duracion>
+				<posicion>3</posicion>
+				<colaboracion_artista>Dr. Dre</colaboracion_artista>
+				<genero>Hardcore hip hop</genero>
+				<letristas>Eminem</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Cum on Everybody</titulo>
+				<duracion>00:03:39</duracion>
+				<posicion>13</posicion>
+				<colaboracion_artista>Dina Rae</colaboracion_artista>
+				<genero>Hip hop</genero>
+				<letristas>Eminem</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Just Don´t Give a Fuck</titulo>
+				<duracion>00:04:02</duracion>
+				<posicion>15</posicion>
+				<colaboracion_artista></colaboracion_artista>
+				<genero>Hardcore hip hop</genero>
+				<genero>Underground hip hop</genero>
+				<letristas>M. Mathers</letristas>
+				<letristas>J. Bass</letristas>
+				<letristas>M. Bass</letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00002">
+		<titulo_album>The Eminem Show</titulo_album>
+		<artista_grupo>Eminem</artista_grupo>
+		<producido>Dr. Dre</producido>
+		<producido>Eminem</producido>
+		<producido>Jeff Bass</producido>
+		<num_canciones>20</num_canciones>
+		<duracion><star>00:70:20</star></duracion>
+		<fecha dia="26" mes="Mayo" anho="2002"></fecha>
+		<genero>Hip hop</genero>
+		<genero>Rap</genero>
+		<precio>20</precio>
+		<url></url>
+		<formato_publicacion>CD</formato_publicacion>
+		<formato_publicacion>Digital</formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo>Without Me</titulo>
+				<duracion>00:04:50</duracion>
+				<posicion>10</posicion>
+				<colaboracion_artista></colaboracion_artista>
+				<genero>Hip hop</genero>
+				<letristas>M. Mathers</letristas>
+				<letristas>Jeff Bass</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Business</titulo>
+				<duracion>00:04:11</duracion>
+				<posicion>2</posicion>
+				<colaboracion_artista>Dr. Dre</colaboracion_artista>
+				<genero>Hip hop</genero>
+				<letristas>Eminem</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Till I Collapse</titulo>
+				<duracion>00:04:57</duracion>
+				<posicion>18</posicion>
+				<colaboracion_artista>Nate Dogg</colaboracion_artista>
+				<genero>Hip hop</genero>
+				<genero>Gangsta rap</genero>
+				<letristas>M. Mathers</letristas>
+				<letristas>N. Hale</letristas>
+				<letristas>L. Resto</letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+
+</albumes>
+
+

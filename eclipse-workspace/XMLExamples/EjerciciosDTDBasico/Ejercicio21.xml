@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE lista_de_notas SYSTEM "Ejercicio21.dtd">
+
+<ediciones_aranda>
+	<header>
+		<empresa>Ediciones Aranda</empresa>
+		<informe>Informa regional de ventas</informe>
+		<descripcion>informa de ventas para las regiones Norte, Centro y sur</descripcion>
+		<fecha>Fecha del informa 30/12/2009</fecha>
+	</header>
+	<lista>
+		<region>
+			<norte>
+				<trimestre>1</trimestre>
+				<libros>24000</libros>
+				<trimestre>2</trimestre>
+				<libros>38600</libros>
+				<trimestre>3</trimestre>
+				<libros></libros>
+				<trimestre>4</trimestre>
+				<libros></libros>
+			</norte>
+		</region>
+		<region>
+			<centro>
+				<trimestre>1</trimestre>
+				<libros></libros>
+				<trimestre>2</trimestre>
+				<libros>16080</libros>
+				<trimestre>3</trimestre>
+				<libros>25000</libros>
+				<trimestre>4</trimestre>
+				<libros>29000</libros>
+			</centro>
+		</region>
+		<region>
+			<sur>
+				<trimestre>1</trimestre>
+				<libros>27000</libros>
+				<trimestre>2</trimestre>
+				<libros>31400</libros>
+				<trimestre>3</trimestre>
+				<libros>40100</libros>
+				<trimestre>3</trimestre>
+				<libros>30000</libros>
+			</sur>
+		</region>
+	</lista>
+	
+</ediciones_aranda>

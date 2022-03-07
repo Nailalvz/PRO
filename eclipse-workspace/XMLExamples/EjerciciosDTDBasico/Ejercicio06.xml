@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Falta enlazar el dtd y crear la version de xml -->
+
+<!DOCTYPE aviso SYSTEM "Ejercicio06.dtd">
+
+<aviso>
+</aviso>
+

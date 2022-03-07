@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<albumes>
+	<album ref="1">
+		<titulo_album>The Slim Shady LP</titulo_album>
+		<artista_grupo>Eminem</artista_grupo>
+		<discografia>Aftermath HailH</discografia>
+		<producido>Marky y Jeff Bass</producido>
+		<producido>Dr. Dre</producido>
+		<producido>Mel-Man</producido>
+		<producido>Eminem</producido>
+		<num_canciones>20</num_canciones>
+		<duracion>00:59:16</duracion>
+		<fecha dia="23" mes="Febrero" anho="1999"></fecha>
+		<genero>Hardcore hip hop</genero>
+		<genero>Horrorcore</genero>
+		<genero>Comedy hip hop</genero>
+		<precio>17</precio>
+		<url></url>
+		<formato_publicacion>CD</formato_publicacion>
+		<formato_publicacion>Digital</formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo>My Name Is</titulo>
+				<duracion>00:04:28</duracion>
+				<posicion>2</posicion>
+				<colaboracion_artista></colaboracion_artista>
+				<genero>Hip hop</genero>
+				<letristas>Eminem</letristas>
+				<letristas>Dr. Dre</letristas>
+				<letristas>Labi Siffre</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Guilty Conscience</titulo>
+				<duracion>00:03:19</duracion>
+				<posicion>3</posicion>
+				<colaboracion_artista>Dr. Dre</colaboracion_artista>
+				<genero>Hardcore hip hop</genero>
+				<letristas>Eminem</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Cum on Everybody</titulo>
+				<duracion>00:03:39</duracion>
+				<posicion>13</posicion>
+				<colaboracion_artista>Dina Rae</colaboracion_artista>
+				<genero>Hip hop</genero>
+				<letristas>Eminem</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Just Don´t Give a Fuck</titulo>
+				<duracion>00:04:02</duracion>
+				<posicion>15</posicion>
+				<colaboracion_artista></colaboracion_artista>
+				<genero>Hardcore hip hop</genero>
+				<genero>Underground hip hop</genero>
+				<letristas>M. Mathers</letristas>
+				<letristas>J. Bass</letristas>
+				<letristas>M. Bass</letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="2">
+		<titulo_album>The Eminem Show</titulo_album>
+		<artista_grupo>Eminem</artista_grupo>
+		<discografia>Aftermath</discografia>
+		<discografia>Interscope</discografia>
+		<producido>Dr. Dre</producido>
+		<producido>Eminem</producido>
+		<producido>Jeff Bass</producido>
+		<num_canciones>20</num_canciones>
+		<duracion>01:16:20</duracion>
+		<fecha dia="26" mes="Mayo" anho="2002"></fecha>
+		<genero>Hip hop</genero>
+		<genero>Rap</genero>
+		<precio>20</precio>
+		<url></url>
+		<formato_publicacion>CD</formato_publicacion>
+		<formato_publicacion>Digital</formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo>Without Me</titulo>
+				<duracion>00:04:50</duracion>
+				<posicion>10</posicion>
+				<colaboracion_artista></colaboracion_artista>
+				<genero>Hip hop</genero>
+				<letristas>M. Mathers</letristas>
+				<letristas>Jeff Bass</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Business</titulo>
+				<duracion>00:04:11</duracion>
+				<posicion>2</posicion>
+				<colaboracion_artista>Dr. Dre</colaboracion_artista>
+				<genero>Hip hop</genero>
+				<letristas>Eminem</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Till I Collapse</titulo>
+				<duracion>00:04:57</duracion>
+				<posicion>18</posicion>
+				<colaboracion_artista>Nate Dogg</colaboracion_artista>
+				<genero>Hip hop</genero>
+				<genero>Gangsta rap</genero>
+				<letristas>M. Mathers</letristas>
+				<letristas>N. Hale</letristas>
+				<letristas>L. Resto</letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="3">
+		<titulo_album>2001</titulo_album>
+		<artista_grupo>Dr. Dre</artista_grupo>
+		<discografia>Aftermath</discografia>
+		<discografia>Interscope</discografia>
+		<producido>Dr. Dre</producido>
+		<producido>Mel-Man</producido>
+		<producido>Lord Finesse</producido>
+		<num_canciones>23</num_canciones>
+		<duracion>01:08:12</duracion>
+		<fecha dia="16" mes="Noviembre" anho="1999"></fecha>
+		<genero>Gangsta rap</genero>
+		<genero>West Coast hip hop</genero>
+		<precio>30</precio>
+		<url></url>
+		<formato_publicacion>CD</formato_publicacion>
+		<formato_publicacion>Digital</formato_publicacion>
+		<formato_publicacion>Vinilo</formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo>Still D.R.E.</titulo>
+				<duracion>00:04:30</duracion>
+				<posicion>4</posicion>
+				<colaboracion_artista>Snoop Dogg</colaboracion_artista>
+				<genero>West Coast hip hop</genero>
+				<letristas>Andre Young</letristas>
+				<letristas>Calvin Broadus</letristas>
+				<letristas>Melvin Bradford</letristas>
+				<letristas>Scott Storch</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Forgot About Dre</titulo>
+				<duracion>00:03:42</duracion>
+				<posicion>10</posicion>
+				<colaboracion_artista>Eminem</colaboracion_artista>
+				<genero>Hip hop</genero>
+				<genero>Gangsta rap</genero>
+				<genero>Rap</genero>
+				<letristas>Andre Young</letristas>
+				<letristas>Marshall Mathers</letristas>
+				<letristas>Melvin Bradford</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>The next Episode</titulo>
+				<duracion>00:02:41</duracion>
+				<posicion>11</posicion>
+				<colaboracion_artista>Snoop Dogg</colaboracion_artista>
+				<colaboracion_artista>Kurupt</colaboracion_artista>
+				<colaboracion_artista>Nate Dogg</colaboracion_artista>
+				<genero>Hip hop</genero>
+				<letristas>Hittman</letristas>
+				<letristas>Snoop Dogg</letristas>
+				<letristas>Dr. Dre</letristas>
+				<letristas>Nate Dogg</letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="4">
+		<titulo_album>Montero</titulo_album>
+		<artista_grupo>Lil Nas X</artista_grupo>
+		<discografia>Columbia Records</discografia>
+		<producido>Lil Nas X</producido>
+		<producido>Kayne West</producido>
+		<producido>Ryan Tedder</producido>
+		<num_canciones>15</num_canciones>
+		<duracion>00:41:17</duracion>
+		<fecha dia="17" mes="Septiembre" anho="2021"></fecha>
+		<genero>Hip hop</genero>
+		<genero>Pop rap</genero>
+		<precio>20</precio>
+		<url></url>
+		<formato_publicacion>CD</formato_publicacion>
+		<formato_publicacion>Digital</formato_publicacion>
+		<formato_publicacion>DVD</formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo>Montero (Call me by your name)</titulo>
+				<duracion>00:02:17</duracion>
+				<posicion>1</posicion>
+				<genero>Pop rap</genero>
+				<letristas>Lil Nas X</letristas>
+				<letristas>Denzel baptiste</letristas>
+				<letristas>David Biral</letristas>
+				<letristas>Rosario Lenzo</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Industry Baby</titulo>
+				<duracion>00:03:32</duracion>
+				<posicion>3</posicion>
+				<colaboracion_artista>Jack Harlow</colaboracion_artista>
+				<genero>Pop Rap</genero>
+				<genero>Trap</genero>
+				<letristas>Lil Nas X</letristas>
+				<letristas>Jackman Harlow</letristas>
+				<letristas>Mark Williams</letristas>
+				<letristas>Raúl Cubina</letristas>
+				<letristas>Roy Lenzo</letristas>
+				<letristas>Denzel Baptiste</letristas>
+				<letristas>David Biral</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Thats What I Want</titulo>
+				<duracion>00:02:23</duracion>
+				<posicion>4</posicion>
+				<genero>Pop</genero>
+				<genero>Pop rock</genero>
+				<letristas>Lil Nas X</letristas>
+				<letristas>Omer Fedi</letristas>
+				<letristas>Blake Slatkin</letristas>
+				<letristas>Ryan Tedder</letristas>
+				<letristas>KBeaZy</letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+		<album ref="5">
+		<titulo_album>Highway to Hell</titulo_album>
+		<artista_grupo>AC/DC</artista_grupo>
+		<discografia>Atlantic Records</discografia>
+		<discografia>Warner Music Group</discografia>
+		<producido>	Robert John "Mutt" Lange</producido>
+		<num_canciones>10</num_canciones>
+		<duracion>00:42:10</duracion>
+		<fecha dia="27" mes="Julio" anho="1979"></fecha>
+		<genero>Hard rock</genero>
+		<genero>Blues rock</genero>
+		<genero>Rock and roll</genero>
+		<precio>50</precio>
+		<url></url>
+		<formato_publicacion>CD</formato_publicacion>
+		<formato_publicacion>Vinilo</formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo>Highway to Hell</titulo>
+				<duracion>00:03:28</duracion>
+				<posicion>1</posicion>
+				<genero>Hard rock</genero>
+				<letristas>Angus Young</letristas>
+				<letristas>Malcolm Young</letristas>
+				<letristas>Bon Scott</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Girls Got Rhythm</titulo>
+				<duracion>00:03:23</duracion>
+				<posicion>2</posicion>
+				<genero>Hard rock</genero>
+				<letristas>Angus Young</letristas>
+				<letristas>Malcolm Young</letristas>
+				<letristas>Bon Scott</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Touch too Much</titulo>
+				<duracion>00:04:26</duracion>
+				<posicion>4</posicion>
+				<genero>Hard rock</genero>
+				<letristas>Angus Young</letristas>
+				<letristas>Malcolm Young</letristas>
+				<letristas>Bon Scott</letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="6">
+		<titulo_album>Through the Past, Darkly (Big Hits Vol. 2)</titulo_album>
+		<artista_grupo>The Rolling Stones</artista_grupo>
+		<discografia>Decca</discografia>
+		<discografia>London/ABKCO</discografia>
+		<producido>Andrew Loog Oldham</producido>
+		<producido>The Rolling Stones</producido>
+		<producido>Jimmy Miller</producido>
+		<num_canciones>12</num_canciones>
+		<duracion>00:42:30</duracion>
+		<fecha dia="12" mes="Septiembre" anho="1969"></fecha>
+		<genero>Rock</genero>
+		<precio>45</precio>
+		<url></url>
+		<formato_publicacion>CD</formato_publicacion>
+		<formato_publicacion>Vinilo</formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo>Jumpin' Jack Flash</titulo>
+				<duracion>00:03:42</duracion>
+				<posicion>1</posicion>
+				<genero>Hard rock</genero>
+				<letristas>Mick Jagger</letristas>
+				<letristas>Keith Richards</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Ruby Tuesday</titulo>
+				<duracion>00:03:14</duracion>
+				<posicion>9</posicion>
+				<genero>Pop Barroco</genero>
+				<letristas>Mick Jagger</letristas>
+				<letristas>Keith Richards</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Honky Tonk Women</titulo>
+				<duracion>00:03:03</duracion>
+				<posicion>12</posicion>
+				<genero>Blues rock</genero>
+				<genero>Hard rock</genero>
+				<letristas>Mick Jagger</letristas>
+				<letristas>Keith Richards</letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="7">
+		<titulo_album>BE</titulo_album>
+		<artista_grupo>BTS</artista_grupo>
+		<discografia>Columbia Records</discografia>
+		<discografia>Big Hit</discografia>
+		<producido>BTS</producido>
+		<producido>Pdogg</producido>
+		<num_canciones>8</num_canciones>
+		<duracion>00:28:30</duracion>
+		<fecha dia="20" mes="Noviembre" anho="2020"></fecha>
+		<genero>Pop</genero>
+		<genero>Hip hop</genero>
+		<genero>Dance</genero>
+		<genero>K-pop</genero>
+		<precio>50</precio>
+		<url></url>
+		<formato_publicacion>CD</formato_publicacion>
+		<formato_publicacion>Digital</formato_publicacion>
+		<formato_publicacion>DVD</formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo>Life Goes On</titulo>
+				<duracion>00:03:27</duracion>
+				<posicion>1</posicion>
+				<genero>Rap alternativo</genero>
+				<genero>Synth pop</genero>
+				<letristas>Antonina Armato</letristas>
+				<letristas>J-Hope</letristas>
+				<letristas>RM</letristas>
+				<letristas>Suga</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Dis-ease</titulo>
+				<duracion>00:04:00</duracion>
+				<posicion>6</posicion>
+				<genero>Hip hop</genero>
+				<letristas>GHSTLOOP</letristas>
+				<letristas>Ivan Jackson Rosenberg</letristas>
+				<letristas>jhope</letristas>
+				<letristas>Jimin</letristas>
+				<letristas>Pdogg</letristas>
+				<letristas>Randy Runyon</letristas>
+				<letristas>RM</letristas>
+				<letristas>Suga</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Stay</titulo>
+				<duracion>00:03:25</duracion>
+				<posicion>7</posicion>
+				<genero>Pop</genero>
+				<letristas>Arston</letristas>
+				<letristas>Jin</letristas>
+				<letristas>Jung Kook</letristas>
+				<letristas>RM</letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="8">
+		<titulo_album>Love Yourself: Her</titulo_album>
+		<artista_grupo>BTS</artista_grupo>
+		<discografia>Loen</discografia>
+		<discografia>Big Hit</discografia>
+		<discografia>Universal</discografia>
+		<producido>BTS</producido>
+		<producido>Pdogg</producido>
+		<num_canciones>8</num_canciones>
+		<duracion>00:30:33</duracion>
+		<fecha dia="18" mes="Septiembre" anho="2017"></fecha>
+		<genero>Dance Pop</genero>
+		<genero>Hip hop</genero>
+		<genero>Dance</genero>
+		<genero>EDM</genero>
+		<precio>35</precio>
+		<url></url>
+		<formato_publicacion>CD</formato_publicacion>
+		<formato_publicacion>Digital</formato_publicacion>
+		<canciones>	
+				
+			<cancion>
+				<titulo>DNA</titulo>
+				<duracion>00:03:43</duracion>
+				<posicion>2</posicion>
+				<genero>Future bass</genero>
+				<genero>K-pop</genero>
+				<genero>Electrónica</genero>
+				<letristas>Pdogg</letristas>
+				<letristas>Supreme Boi</letristas>
+				<letristas>«Hitman» Bang</letristas>
+				<letristas>Suga</letristas>
+				<letristas>RM</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Best of Me</titulo>
+				<duracion>00:03:46</duracion>
+				<posicion>2</posicion>
+				<colaboracion_artista>The Chainsmokers</colaboracion_artista>
+				<genero>Dance pop</genero>
+				<letristas>Andrew Taggart</letristas>
+				<letristas>Pdogg</letristas>
+				<letristas>Suga</letristas>
+				<letristas>J-Hope</letristas>
+				<letristas>«Hitman» Bang</letristas>
+				<letristas>Ashton Foster</letristas>
+				<letristas>Sam Klempner</letristas>
+			</cancion>
+			
+			<cancion>
+				<titulo>Mic-Drop</titulo>
+				<duracion>00:03:58</duracion>
+				<posicion>7</posicion>
+				<genero>Hip hop</genero>
+				<genero>EDM</genero>
+				<letristas>Pdogg</letristas>
+				<letristas>Supreme Boi</letristas>
+				<letristas>«Hitman» Bang</letristas>
+				<letristas>J-Hope</letristas>
+				<letristas>RM</letristas>
+				<letristas>Steve Aoki</letristas>
+				<letristas>Tayla Parx</letristas>
+			</cancion>
+
+		</canciones>
+	</album>
+</albumes>

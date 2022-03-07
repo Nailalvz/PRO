@@ -1,0 +1,4 @@
+<!ELEMENT aviso (titulo?, (parrafo+, grafico)*)>
+
+
+<!-- No tenemos porque declarar los atributos -->

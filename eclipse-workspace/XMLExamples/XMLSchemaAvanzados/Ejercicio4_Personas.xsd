@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="personas">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="persona" minOccurs="1"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="persona">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="nombre" />
+				<xsd:element ref="nacimiento" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="direccion" maxOccurs="unbounded"/>
+				<xsd:choice>
+					<xsd:element ref="varon" />
+					<xsd:element ref="hembra" />
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:simpleType name="cadenaString">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"></xsd:maxLength>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+
+	<xsd:element name="nacimiento">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute name="dia" type="typedia"></xsd:attribute>
+					<xsd:attribute name="mes" type="typemes"></xsd:attribute>
+					<xsd:attribute name="year" type="typeyear"></xsd:attribute>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="direccion">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="calle" maxOccurs="unbounded"></xsd:element>
+				<xsd:element ref="poblacion" maxOccurs="unbounded"></xsd:element>
+				<xsd:element ref="provincia" maxOccurs="unbounded"></xsd:element>
+				<xsd:element ref="codigopostal" maxOccurs="unbounded"></xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="nombre" type="cadenaString"></xsd:element>
+	<xsd:element name="calle" type="cadenaString"></xsd:element>
+	<xsd:element name="poblacion" type="cadenaString"></xsd:element>
+	<xsd:element name="provincia" type="cadenaString"></xsd:element>
+	<xsd:element name="varon"></xsd:element>
+	<xsd:element name="hembra"></xsd:element>
+	<xsd:element name="codigopostal"></xsd:element>
+	
+	<xsd:simpleType name="typedia">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="1"></xsd:minInclusive>
+			<xsd:maxInclusive value="31"></xsd:maxInclusive>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="typemes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Enero"></xsd:enumeration>
+			<xsd:enumeration value="Febrero"></xsd:enumeration>
+			<xsd:enumeration value="Marzo"></xsd:enumeration>
+			<xsd:enumeration value="Abril"></xsd:enumeration>
+			<xsd:enumeration value="Mayo"></xsd:enumeration>
+			<xsd:enumeration value="Junio"></xsd:enumeration>
+			<xsd:enumeration value="Julio"></xsd:enumeration>
+			<xsd:enumeration value="Agosto"></xsd:enumeration>
+			<xsd:enumeration value="Septiembre"></xsd:enumeration>
+			<xsd:enumeration value="Octubre"></xsd:enumeration>
+			<xsd:enumeration value="Noviembre"></xsd:enumeration>
+			<xsd:enumeration value="Diciembre"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="typeyear">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="1900"></xsd:minInclusive>
+			<xsd:maxInclusive value="2011"></xsd:maxInclusive>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="tipoCodPostal">
+		<xsd:restriction base="xsd:integer">
+			<xsd:totalDigits value="5" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

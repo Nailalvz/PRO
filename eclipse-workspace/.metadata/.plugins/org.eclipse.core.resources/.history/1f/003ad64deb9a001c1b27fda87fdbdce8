@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda_musica SYSTEM "albumes.dtd">
+
+<albumes>
+	<album ref="00001">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00002">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00003">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00004">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00005">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00006">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00007">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00008">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00009">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00010">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00011">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00012">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00013">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00014">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+	
+	<album ref="00015">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<formato_publicacion></formato_publicacion>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+
+</albumes>
+
+

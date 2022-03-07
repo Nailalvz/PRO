@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE albumes SYSTEM "albumes.dtd">
+
+<albumes>
+	<album ref="00001">
+		<titulo></titulo>
+		<artista_grupo></artista_grupo>
+		<produccion></produccion>
+		<num_canciones></num_canciones>
+		<duracion></duracion>
+		<fecha dia="" mes="" anho=""></fecha>
+		<generos></generos>
+		<precio></precio>
+		<url></url>
+		<canciones>
+			<cancion>
+				<titulo></titulo>
+				<duracion></duracion>
+				<posicion></posicion>
+				<colaboracion>
+					<artista></artista>
+				</colaboracion>
+				<genero></genero>
+				<letristas></letristas>
+			</cancion>
+		</canciones>
+	</album>
+
+</albumes>
+

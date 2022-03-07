@@ -1,0 +1,14 @@
+
+public class Television2 {
+	private static final int RESOLUCION_POR_DEFECTO = 20;
+	private static final boolean SINTO_POR_DEFECTO = false;
+	
+	private int resolucion;
+	private boolean sinto;
+	
+	public Television2() {
+		super();
+	}
+	
+	public
+}

@@ -1,0 +1,11 @@
+
+<!ELEMENT Concesionario (Modelo)*>
+<!ELEMENT Modelo (#PCDATA | Motor | Potencia | Consumo_medio)*>
+<!ELEMENT Motor (#PCDATA)>
+<!ELEMENT Potencia (#PCDATA)><!-- En CV. -->
+<!ELEMENT Consumo_medio (#PCDATA)><!-- En litros. -->
+<!ATTLIST Modelo  id ID #REQUIRED
+ Modelos_relacionados IDREFS #IMPLIED
+>
+<!ATTLIST Motor Modelos_relacionados IDREFS #REQUIRED>
+<!ATTLIST Consumo_medio Velocidad_km CDATA "" >

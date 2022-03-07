@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="albumes">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="album" minOccurs="1"
+			maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="album">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="titulo"></xsd:element>
+			<xsd:element ref="artista_grupo"></xsd:element>
+			<xsd:element ref="produccido" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			<xsd:element ref="num_canciones"></xsd:element>
+			<xsd:element ref="duracion"></xsd:element>
+			<xsd:element ref="fecha"></xsd:element>
+			<xsd:element ref="genero" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			<xsd:element ref="precio"></xsd:element>
+			<xsd:element ref="url" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element ref="formato_publicacion" minOccurs="1" macOccurs="4"></xsd:element>
+			<xsd:element ref="canciones" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+
+<xsd:element name="album">
+<xsd:simpleContent>
+			<xsd:extension base="xsd:integer">
+				<xsd:attibute name="ref" type="typeref"></xsd:attibute>
+			</xsd:extension>
+		</xsd:simpleContent>
+</xsd:element>
+		
+
+
+<xsd:element name="canciones">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="cancion" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence> 
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="cancion">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="titulo"></xsd:element>
+			<xsd:element ref="duracion"></xsd:element>
+			<xsd:element ref="posicion"></xsd:element>
+			<xsd:element ref="colaboracion_artista" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+			<xsd:element ref="genero" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			<xsd:element ref="letristas" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+</xsd:schema>

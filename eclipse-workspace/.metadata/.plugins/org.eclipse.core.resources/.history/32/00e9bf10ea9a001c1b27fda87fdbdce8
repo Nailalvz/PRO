@@ -1,0 +1,6 @@
+<!ELEMENT albumes (album*)>
+<!ELEMENT album (titulo, artista_grupo, produccion, num_canciones, duracion, fecha,
+generos, precio, url?,formato_publicacion, canciones)>
+<!ELEMENT canciones (cancion*)>
+<!ELEMENT cancion (titulo, duracion, posicion, colaboracion?,genero, letrsitas)>
+<!ELEMENT colaboracion (artista*)>

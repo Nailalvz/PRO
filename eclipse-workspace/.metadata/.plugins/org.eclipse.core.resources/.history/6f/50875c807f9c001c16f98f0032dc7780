@@ -1,0 +1,37 @@
+<!ELEMENT albumes (album+)>
+<!ELEMENT album (titulo_album,artista_grupo,discografia+,producido+,num_canciones,duracion,fecha,genero+,precio,url?,formato_publicacion*,canciones)>
+
+<!ELEMENT titulo_album (#PCDATA)>
+<!ELEMENT artista_grupo (#PCDATA)>
+<!ELEMENT discografia (#PCDATA)>
+<!ELEMENT producido (#PCDATA)>
+<!ELEMENT num_canciones (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT formato_publicacion (ANY)>
+
+
+<!ELEMENT canciones (cancion+)>
+<!ELEMENT cancion (titulo,duracion,posicion,colaboracion_artista*,genero+,letristas+)>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT posicion (#PCDATA)>
+<!ELEMENT colaboracion_artista (#PCDATA)>
+<!ELEMENT letristas (#PCDATA)>
+
+
+<!ATTLIST album
+	ref ID #REQUIRED
+	>
+	
+<!ATTLIST fecha
+	dia CDATA #IMPLIED
+	mes CDATA #IMPLIED
+	anho CDATA #IMPLIED
+	>
+	
+	<!ATTLIST formato_publicacion (CD | DVD | Vinilo | Digital) #REQUIRED>
+	

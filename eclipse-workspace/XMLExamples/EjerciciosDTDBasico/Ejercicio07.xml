@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE aviso SYSTEM "Ejercicio07.dtd">
+
+
+<aviso>
+<titulo>...</titulo>
+<parrafo>...</parrafo>
+<grafico>...</grafico>
+<parrafo>...</parrafo>
+<!-- Tenemos que agregar un grafico más por la cardinalidad del dtd -->
+<grafico>...</grafico>
+</aviso>

@@ -1,0 +1,7 @@
+<!ELEMENT aviso (titulo?, (parrafo+, grafico)*)>
+
+<!--Falta declarar los atributos-->
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT parrafo (#PCDATA)>
+<!ELEMENT grafico (#PCDATA)>
