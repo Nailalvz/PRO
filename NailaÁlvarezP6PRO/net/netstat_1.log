@@ -1,0 +1,80 @@
+2022/05/13 17:10:00
+Conexiones activas
+  Proto  Direcci¢n local        Direcci¢n remota       Estado
+  TCP    0.0.0.0:445            DESKTOP-M47M3E9:0      LISTENING
+  TCP    0.0.0.0:3307           DESKTOP-M47M3E9:0      LISTENING
+  TCP    0.0.0.0:6878           DESKTOP-M47M3E9:0      LISTENING
+  TCP    0.0.0.0:6880           DESKTOP-M47M3E9:0      LISTENING
+  TCP    0.0.0.0:7680           DESKTOP-M47M3E9:0      LISTENING
+  TCP    0.0.0.0:11100          DESKTOP-M47M3E9:0      LISTENING
+  TCP    0.0.0.0:33060          DESKTOP-M47M3E9:0      LISTENING
+  TCP    0.0.0.0:49665          DESKTOP-M47M3E9:0      LISTENING
+  TCP    0.0.0.0:49667          DESKTOP-M47M3E9:0      LISTENING
+  TCP    0.0.0.0:49669          DESKTOP-M47M3E9:0      LISTENING
+  TCP    0.0.0.0:50827          DESKTOP-M47M3E9:0      LISTENING
+  TCP    127.0.0.1:6463         DESKTOP-M47M3E9:0      LISTENING
+  TCP    127.0.0.1:9010         DESKTOP-M47M3E9:63867  ESTABLISHED
+  TCP    127.0.0.1:9100         DESKTOP-M47M3E9:0      LISTENING
+  TCP    127.0.0.1:9180         DESKTOP-M47M3E9:0      LISTENING
+  TCP    127.0.0.1:11300        DESKTOP-M47M3E9:0      LISTENING
+  TCP    127.0.0.1:27060        DESKTOP-M47M3E9:0      LISTENING
+  TCP    127.0.0.1:28198        DESKTOP-M47M3E9:0      LISTENING
+  TCP    127.0.0.1:49672        DESKTOP-M47M3E9:49673  ESTABLISHED
+  TCP    127.0.0.1:49674        DESKTOP-M47M3E9:49675  ESTABLISHED
+  TCP    127.0.0.1:49710        DESKTOP-M47M3E9:11300  ESTABLISHED
+  TCP    127.0.0.1:49715        DESKTOP-M47M3E9:0      LISTENING
+  TCP    127.0.0.1:49741        DESKTOP-M47M3E9:49715  ESTABLISHED
+  TCP    127.0.0.1:63271        DESKTOP-M47M3E9:27060  ESTABLISHED
+  TCP    127.0.0.1:63867        DESKTOP-M47M3E9:9010   ESTABLISHED
+  TCP    127.0.0.1:65001        DESKTOP-M47M3E9:49712  ESTABLISHED
+  TCP    192.168.0.15:49690     wf-in-f188:https       ESTABLISHED
+  TCP    192.168.0.15:50801     wa-in-f188:5228        ESTABLISHED
+  TCP    192.168.0.15:51050     192.168.0.20:57573     TIME_WAIT
+  TCP    192.168.0.15:51052     lb-140-82-121-4-fra:https  ESTABLISHED
+  TCP    192.168.0.15:51054     192.168.0.20:57573     TIME_WAIT
+  TCP    192.168.0.15:51056     192.168.0.20:57573     TIME_WAIT
+  TCP    192.168.0.15:51058     a184-25-43-66:http     TIME_WAIT
+  TCP    192.168.0.15:51061     din-adsl-a-18-49:https  CLOSE_WAIT
+  TCP    192.168.0.15:51063     a-0003:https           ESTABLISHED
+  TCP    192.168.0.15:51065     192.168.0.20:57573     TIME_WAIT
+  TCP    192.168.0.15:51067     192.168.0.20:57573     TIME_WAIT
+  TCP    192.168.0.15:51069     192.168.0.20:57573     TIME_WAIT
+  TCP    192.168.0.15:55069     52.155.161.106:https   CLOSE_WAIT
+  TCP    192.168.0.15:63960     185.25.182.77:27026    ESTABLISHED
+  TCP    192.168.0.15:64049     a23-214-210-65:https   CLOSE_WAIT
+  TCP    192.168.56.1:139       DESKTOP-M47M3E9:0      LISTENING
+  TCP    [::]:445               DESKTOP-M47M3E9:0      LISTENING
+  TCP    [::]:3307              DESKTOP-M47M3E9:0      LISTENING
+  TCP    [::]:11100             DESKTOP-M47M3E9:0      LISTENING
+  TCP    [::]:49664             DESKTOP-M47M3E9:0      LISTENING
+  TCP    [::]:49666             DESKTOP-M47M3E9:0      LISTENING
+  TCP    [::]:49668             DESKTOP-M47M3E9:0      LISTENING
+  UDP    0.0.0.0:5050           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5355           *:*                    
+  UDP    0.0.0.0:27036          *:*                    
+  UDP    0.0.0.0:54915          *:*                    
+  UDP    0.0.0.0:58750          *:*                    
+  UDP    0.0.0.0:62345          *:*                    
+  UDP    127.0.0.1:10010        *:*                    
+  UDP    127.0.0.1:55181        *:*                    
+  UDP    127.0.0.1:58749        *:*                    
+  UDP    127.0.0.1:61220        *:*                    
+  UDP    192.168.0.15:137       *:*                    
+  UDP    192.168.0.15:1900      *:*                    
+  UDP    192.168.0.15:5353      *:*                    
+  UDP    192.168.0.15:61221     *:*                    
+  UDP    192.168.56.1:138       *:*                    
+  UDP    192.168.56.1:2177      *:*                    
+  UDP    192.168.56.1:32968     *:*                    
+  UDP    [::]:5353              *:*                    
+  UDP    [::]:5353              *:*                    
+  UDP    [::]:49733             *:*                    
+  UDP    [::1]:1900             *:*                    
+  UDP    [::1]:61217            *:*                    
+  UDP    [fe80::4e:4000:b8ce:1e93%2]:2177  *:*                    
+  UDP    [fe80::b984:24da:4e12:71e9%16]:1900  *:*                    
+  UDP    [fe80::b984:24da:4e12:71e9%16]:61218  *:*                    
