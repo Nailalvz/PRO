@@ -39,8 +39,7 @@ public class Main {
 			bw.newLine();
 			bw.flush();
 		} catch (IOException e) {
-			
-			System.err.println(e.getMessage());
+			System.err.println("Error de E/S. " + e.getMessage());
 			escribirEnErrLog(e.getMessage());
 		}
 	}
@@ -52,7 +51,8 @@ public class Main {
 		boolean salir = false;
 		File f = null;
 		
-		
+		while(!salir) {
+			
 			System.out.println("Seleccione como desea identificarse:\n"
 				+ "1. Introduciendo un username.\n"
 				+ "2. Con el username del sistema.\n"
@@ -73,8 +73,8 @@ public class Main {
 					resultadoNetstat();
 					System.out.println("Registro creado con éxito.");
 				} catch (IOException e) {
-					
-					e.printStackTrace();
+					System.err.println("Error de E/S. " + e.getMessage());
+					escribirEnErrLog(e.getMessage());
 				}
 				break;
 				
@@ -89,8 +89,7 @@ public class Main {
 				
 					System.out.println("Registro creado con éxito.");
 				} catch (IOException e) {
-					
-					e.printStackTrace();
+					System.err.println("Error de E/S. " + e.getMessage());
 					escribirEnErrLog(e.getMessage());
 				}
 				break;
@@ -99,11 +98,13 @@ public class Main {
 				salir = true;
 				System.out.println("Finalizando programa.");
 				break;
-				
+			default:
+				System.err.println("La opción no es válida.");
+				break;
 			}
 		}
+	}
 		
-	
 	// Devuelve el netstat con el mayor número de netsat registrado
 	public static int getNumeroUltimoNetStatLog() {
 		int max = 0;
@@ -133,6 +134,7 @@ public class Main {
 			}
 			
 		return max;
+		
 		}
 	
 	public static void resultadoNetstat() throws IOException {
@@ -140,13 +142,12 @@ public class Main {
 		ArrayList<String> netstat = new ArrayList<>();
 		BufferedReader br = null;
 		BufferedWriter bw = null;
-		BufferedWriter bw2 = null;
 		int num_netstat;
+		
 		if(getNumeroUltimoNetStatLog() == 0) {
 			num_netstat = 1;
-		} else {
-			num_netstat = getNumeroUltimoNetStatLog() + 1;
-		}
+		} else num_netstat = getNumeroUltimoNetStatLog();
+		
 		f = new File("net\\netstat_" + num_netstat + ".log");
 		
 		try {
@@ -158,43 +159,28 @@ public class Main {
 			while(br.readLine() != null) {
 				netstat.add(br.readLine());
 			}
-			
-			int aux = (200 - contadorLineas(f)); //Comprueba cuantas lineas libres hay
-			if(netstat.size() <= aux) { //Condicion que comprueba si el Arraylist tiene menos lineas que las lineas del netstat en el que vamos a escribir
 				for(int i = 0; i < netstat.size(); i++) {
-					bw.write(netstat.get(i));
-					bw.newLine();
+					if(200 - contadorLineas(f) != 0) {
+						bw.write(netstat.get(i));
+						bw.newLine();
+						bw.flush();
+					} else {
+						num_netstat++;
+						f = new File ("net\\netstat_" + (num_netstat) + ".log");
+						f.createNewFile();
+						bw = new BufferedWriter(new FileWriter(f, true));
+						i--;
+					}
 				}
-				bw.flush();
-			} else {
-				for(int i = 0; i < aux; i++) {
-					bw.write(netstat.get(i));
-					bw.newLine();	
-				}
-				
-				bw.flush();
-				File f2 = new File ("net\\netstat" + (num_netstat + 1) + ".log");
-				f2.createNewFile();
-				bw2 = new BufferedWriter(new FileWriter(f2, true));
-				for(int i = aux; i < netstat.size(); i++) {
-					bw2.write(netstat.get(i));
-					bw2.newLine();
-				}
-				bw2.flush();
-				bw2.close();
-			}
-		
 		} catch (IOException e) {
-		
-			e.printStackTrace();
+			System.err.println("Error de E/S. " + e.getMessage());
 			escribirEnErrLog(e.getMessage());
 		} finally {
 			br.close();
 			bw.close();
-
 		}
-		
 	}
+	
 	
 	private static int contadorLineas(File f) {
 		int lineas = 0;
@@ -202,27 +188,31 @@ public class Main {
 			while(br.readLine() != null)
 				lineas++;
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.err.println("Error de E/S. " + e.getMessage());
 			escribirEnErrLog(e.getMessage());
 		}
 		return lineas;
 	}
 	
+	/*
+	 * Este método lo hice para comprobar que el array no estaba vacío
+	 * 
 	public static void muestraArray(ArrayList<String> netstat){
 		for(int i = 0; i < netstat.size(); i++) {
 			System.out.println(netstat.get(i));
 		}
 	}	
 
+	*/
 	
 	//Escribe en la ruta err.log una nueva entrada con fecha y hora y el mensaje de error
 	public static void escribirEnErrLog(String mensaje) {
 		File f = new File("err.log");
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(f, true))) {
 			bw.write(getTimeStamp() + " mensaje de error: " + mensaje);
-		} catch (IOException e) {
 			
-			e.printStackTrace();
+		} catch (IOException e) {
+			System.err.println("Error de E/S. " + e.getMessage());
 			escribirEnErrLog(e.getMessage());
 		}
 	}
@@ -232,7 +222,5 @@ public class Main {
 			directory_exists(new File(".\\actividad"));
 			directory_exists(new File(".\\net"));
 			userLog("actividad");
-
 	}
-
 }
